@@ -35,6 +35,7 @@
             this.lblLoginSenha = new System.Windows.Forms.Label();
             this.lblLoginUsuario = new System.Windows.Forms.Label();
             this.resposta = new System.Windows.Forms.Label();
+            this.lblCadastro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLoginEsqueceuSuaSenha
@@ -111,12 +112,26 @@
             this.resposta.Size = new System.Drawing.Size(30, 20);
             this.resposta.TabIndex = 23;
             this.resposta.Text = "R=";
+            this.resposta.Click += new System.EventHandler(this.resposta_Click);
+            // 
+            // lblCadastro
+            // 
+            this.lblCadastro.AutoSize = true;
+            this.lblCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastro.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblCadastro.Location = new System.Drawing.Point(276, 361);
+            this.lblCadastro.Name = "lblCadastro";
+            this.lblCadastro.Size = new System.Drawing.Size(96, 20);
+            this.lblCadastro.TabIndex = 24;
+            this.lblCadastro.Text = "Cadastre-se";
+            this.lblCadastro.Click += new System.EventHandler(this.lblCadastro_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCadastro);
             this.Controls.Add(this.resposta);
             this.Controls.Add(this.lblLoginEsqueceuSuaSenha);
             this.Controls.Add(this.btnLoginEntrar);
@@ -141,6 +156,7 @@
         private System.Windows.Forms.Label lblLoginSenha;
         private System.Windows.Forms.Label lblLoginUsuario;
         private System.Windows.Forms.Label resposta;
+        private System.Windows.Forms.Label lblCadastro;
     }
 }
 

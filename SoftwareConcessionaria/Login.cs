@@ -15,13 +15,13 @@ namespace SoftwareConcessionaria
 {
     public partial class Login : Form
     {
+        private const string url = "https://wild-lion-khakis.cyclic.app";
+        private const string complemento = "/login"; 
+        
         public Login()
         {
             InitializeComponent();
         }
-
-        private const string url = "https://wild-lion-khakis.cyclic.app";
-        private const string complemento = "/login";        
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -91,6 +91,16 @@ namespace SoftwareConcessionaria
         }
 
         private void lblLoginEsqueceuSuaSenha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resposta_Click(object sender, EventArgs e)
         {
 
         }
