@@ -69,7 +69,7 @@
             this.txtLoginSenha.Name = "txtLoginSenha";
             this.txtLoginSenha.Size = new System.Drawing.Size(247, 38);
             this.txtLoginSenha.TabIndex = 20;
-            this.txtLoginSenha.TextChanged += new System.EventHandler(this.txtLoginSenha_TextChanged);
+//            this.txtLoginSenha.TextChanged += new System.EventHandler(this.txtLoginSenha_TextChanged);
             // 
             // txtLoginUsuario
             // 
@@ -78,7 +78,7 @@
             this.txtLoginUsuario.Name = "txtLoginUsuario";
             this.txtLoginUsuario.Size = new System.Drawing.Size(247, 38);
             this.txtLoginUsuario.TabIndex = 19;
-            this.txtLoginUsuario.TextChanged += new System.EventHandler(this.txtLoginUsuario_TextChanged);
+ //           this.txtLoginUsuario.TextChanged += new System.EventHandler(this.txtLoginUsuario_TextChanged);
             // 
             // lblLoginSenha
             // 
@@ -112,7 +112,7 @@
             this.resposta.Size = new System.Drawing.Size(30, 20);
             this.resposta.TabIndex = 23;
             this.resposta.Text = "R=";
-            this.resposta.Click += new System.EventHandler(this.resposta_Click);
+ //           this.resposta.Click += new System.EventHandler(this.resposta_Click);
             // 
             // lblCadastro
             // 
@@ -141,7 +141,7 @@
             this.Controls.Add(this.lblLoginUsuario);
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
+//            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

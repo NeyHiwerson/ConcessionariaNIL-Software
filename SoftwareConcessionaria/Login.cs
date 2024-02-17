@@ -16,30 +16,15 @@ namespace SoftwareConcessionaria
     public partial class Login : Form
     {
         private const string url = "https://wild-lion-khakis.cyclic.app";
-        private const string complemento = "/login"; 
-        
+        private const string complemento = "/login";                   
+
         public Login()
         {
-            InitializeComponent();
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLoginUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLoginSenha_TextChanged(object sender, EventArgs e)
-        {
-
+            InitializeComponent();            
         }
 
         private async void btnLoginEntrar_Click(object sender, EventArgs e)
-        {            
+        {
             string email = txtLoginUsuario.Text;
             string senha = txtLoginSenha.Text;
 
@@ -48,7 +33,7 @@ namespace SoftwareConcessionaria
                 MessageBox.Show("Por favor, preencha todos os campos.");
                 return;
             }
-                        
+
             var data = new
             {
                 email,
@@ -92,17 +77,15 @@ namespace SoftwareConcessionaria
 
         private void lblLoginEsqueceuSuaSenha_Click(object sender, EventArgs e)
         {
-
+            // Adicione o código para lidar com a recuperação de senha, se necessário
         }
 
         private void lblCadastro_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void resposta_Click(object sender, EventArgs e)
-        {
-
+            // Oculta a janela de Login e mostra a janela de Cadastro
+            this.Hide();
+            Cadastro cadastro = new Cadastro();
+            cadastro.Show();
         }
     }
 }
