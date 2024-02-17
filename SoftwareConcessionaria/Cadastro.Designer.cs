@@ -47,7 +47,7 @@
             this.btnCadEntrar.Location = new System.Drawing.Point(279, 404);
             this.btnCadEntrar.Name = "btnCadEntrar";
             this.btnCadEntrar.Size = new System.Drawing.Size(247, 40);
-            this.btnCadEntrar.TabIndex = 26;
+            this.btnCadEntrar.TabIndex = 28;
             this.btnCadEntrar.Text = "Entrar";
             this.btnCadEntrar.UseVisualStyleBackColor = true;
             this.btnCadEntrar.Click += new System.EventHandler(this.btnCadEntrar_Click);
@@ -98,7 +98,7 @@
             this.txtCadConfirmaSenha.Location = new System.Drawing.Point(279, 331);
             this.txtCadConfirmaSenha.Name = "txtCadConfirmaSenha";
             this.txtCadConfirmaSenha.Size = new System.Drawing.Size(247, 38);
-            this.txtCadConfirmaSenha.TabIndex = 30;
+            this.txtCadConfirmaSenha.TabIndex = 27;
             this.txtCadConfirmaSenha.TextChanged += new System.EventHandler(this.txtCadConfirmaSenha_TextChanged);
             // 
             // txtCadSenha
@@ -107,7 +107,7 @@
             this.txtCadSenha.Location = new System.Drawing.Point(279, 245);
             this.txtCadSenha.Name = "txtCadSenha";
             this.txtCadSenha.Size = new System.Drawing.Size(247, 38);
-            this.txtCadSenha.TabIndex = 29;
+            this.txtCadSenha.TabIndex = 26;
             this.txtCadSenha.TextChanged += new System.EventHandler(this.txtCadSenha_TextChanged);
             // 
             // lblCadConfirmaSenha
@@ -140,7 +140,7 @@
             this.lblCadLogin.Location = new System.Drawing.Point(275, 473);
             this.lblCadLogin.Name = "lblCadLogin";
             this.lblCadLogin.Size = new System.Drawing.Size(132, 20);
-            this.lblCadLogin.TabIndex = 31;
+            this.lblCadLogin.TabIndex = 29;
             this.lblCadLogin.Text = "Já é cadastrado?";
             this.lblCadLogin.Click += new System.EventHandler(this.lblCadLogin_Click);
             // 

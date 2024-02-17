@@ -12,6 +12,9 @@ namespace SoftwareConcessionaria
 {
     public partial class Cadastro : Form
     {
+        private const string url = "https://wild-lion-khakis.cyclic.app";
+        private const string complemento = "/registration";
+        
         public Cadastro()
         {
             InitializeComponent();
@@ -49,7 +52,9 @@ namespace SoftwareConcessionaria
 
         private void lblCadLogin_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Login login = new Login();
+            login.Show();
         }
     }
 }
