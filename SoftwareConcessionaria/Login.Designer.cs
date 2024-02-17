@@ -34,7 +34,7 @@
             this.txtLoginUsuario = new System.Windows.Forms.TextBox();
             this.lblLoginSenha = new System.Windows.Forms.Label();
             this.lblLoginUsuario = new System.Windows.Forms.Label();
-            this.resposta = new System.Windows.Forms.Label();
+            this.txtResposta = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -69,7 +69,6 @@
             this.txtLoginSenha.Name = "txtLoginSenha";
             this.txtLoginSenha.Size = new System.Drawing.Size(247, 38);
             this.txtLoginSenha.TabIndex = 20;
-//            this.txtLoginSenha.TextChanged += new System.EventHandler(this.txtLoginSenha_TextChanged);
             // 
             // txtLoginUsuario
             // 
@@ -78,7 +77,6 @@
             this.txtLoginUsuario.Name = "txtLoginUsuario";
             this.txtLoginUsuario.Size = new System.Drawing.Size(247, 38);
             this.txtLoginUsuario.TabIndex = 19;
- //           this.txtLoginUsuario.TextChanged += new System.EventHandler(this.txtLoginUsuario_TextChanged);
             // 
             // lblLoginSenha
             // 
@@ -102,17 +100,17 @@
             this.lblLoginUsuario.TabIndex = 17;
             this.lblLoginUsuario.Text = "Email";
             // 
-            // resposta
+            // txtResposta
             // 
-            this.resposta.AutoSize = true;
-            this.resposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resposta.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.resposta.Location = new System.Drawing.Point(43, 397);
-            this.resposta.Name = "resposta";
-            this.resposta.Size = new System.Drawing.Size(30, 20);
-            this.resposta.TabIndex = 23;
-            this.resposta.Text = "R=";
- //           this.resposta.Click += new System.EventHandler(this.resposta_Click);
+            this.txtResposta.AutoSize = true;
+            this.txtResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResposta.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.txtResposta.Location = new System.Drawing.Point(43, 397);
+            this.txtResposta.Name = "txtResposta";
+            this.txtResposta.Size = new System.Drawing.Size(30, 20);
+            this.txtResposta.TabIndex = 23;
+            this.txtResposta.Text = "R=";
+            this.txtResposta.Click += new System.EventHandler(this.txtResposta_Click);
             // 
             // lblCadastro
             // 
@@ -132,7 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblCadastro);
-            this.Controls.Add(this.resposta);
+            this.Controls.Add(this.txtResposta);
             this.Controls.Add(this.lblLoginEsqueceuSuaSenha);
             this.Controls.Add(this.btnLoginEntrar);
             this.Controls.Add(this.txtLoginSenha);
@@ -141,7 +139,6 @@
             this.Controls.Add(this.lblLoginUsuario);
             this.Name = "Login";
             this.Text = "Login";
-//            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +152,7 @@
         private System.Windows.Forms.TextBox txtLoginUsuario;
         private System.Windows.Forms.Label lblLoginSenha;
         private System.Windows.Forms.Label lblLoginUsuario;
-        private System.Windows.Forms.Label resposta;
+        private System.Windows.Forms.Label txtResposta;
         private System.Windows.Forms.Label lblCadastro;
     }
 }
