@@ -43,7 +43,7 @@
             this.lblLoginEsqueceuSuaSenha.AutoSize = true;
             this.lblLoginEsqueceuSuaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginEsqueceuSuaSenha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblLoginEsqueceuSuaSenha.Location = new System.Drawing.Point(275, 331);
+            this.lblLoginEsqueceuSuaSenha.Location = new System.Drawing.Point(249, 331);
             this.lblLoginEsqueceuSuaSenha.Name = "lblLoginEsqueceuSuaSenha";
             this.lblLoginEsqueceuSuaSenha.Size = new System.Drawing.Size(168, 20);
             this.lblLoginEsqueceuSuaSenha.TabIndex = 22;
@@ -54,9 +54,9 @@
             // 
             this.btnLoginEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoginEntrar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnLoginEntrar.Location = new System.Drawing.Point(279, 288);
+            this.btnLoginEntrar.Location = new System.Drawing.Point(253, 288);
             this.btnLoginEntrar.Name = "btnLoginEntrar";
-            this.btnLoginEntrar.Size = new System.Drawing.Size(247, 40);
+            this.btnLoginEntrar.Size = new System.Drawing.Size(311, 40);
             this.btnLoginEntrar.TabIndex = 21;
             this.btnLoginEntrar.Text = "Entrar";
             this.btnLoginEntrar.UseVisualStyleBackColor = true;
@@ -64,18 +64,18 @@
             // 
             // txtLoginSenha
             // 
-            this.txtLoginSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginSenha.Location = new System.Drawing.Point(279, 226);
+            this.txtLoginSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoginSenha.Location = new System.Drawing.Point(253, 226);
             this.txtLoginSenha.Name = "txtLoginSenha";
-            this.txtLoginSenha.Size = new System.Drawing.Size(247, 38);
+            this.txtLoginSenha.Size = new System.Drawing.Size(311, 32);
             this.txtLoginSenha.TabIndex = 20;
             // 
             // txtLoginUsuario
             // 
-            this.txtLoginUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginUsuario.Location = new System.Drawing.Point(279, 140);
+            this.txtLoginUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoginUsuario.Location = new System.Drawing.Point(253, 140);
             this.txtLoginUsuario.Name = "txtLoginUsuario";
-            this.txtLoginUsuario.Size = new System.Drawing.Size(247, 38);
+            this.txtLoginUsuario.Size = new System.Drawing.Size(311, 32);
             this.txtLoginUsuario.TabIndex = 19;
             // 
             // lblLoginSenha
@@ -83,7 +83,7 @@
             this.lblLoginSenha.AutoSize = true;
             this.lblLoginSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginSenha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblLoginSenha.Location = new System.Drawing.Point(274, 191);
+            this.lblLoginSenha.Location = new System.Drawing.Point(248, 191);
             this.lblLoginSenha.Name = "lblLoginSenha";
             this.lblLoginSenha.Size = new System.Drawing.Size(92, 31);
             this.lblLoginSenha.TabIndex = 18;
@@ -94,7 +94,7 @@
             this.lblLoginUsuario.AutoSize = true;
             this.lblLoginUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginUsuario.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblLoginUsuario.Location = new System.Drawing.Point(274, 100);
+            this.lblLoginUsuario.Location = new System.Drawing.Point(248, 100);
             this.lblLoginUsuario.Name = "lblLoginUsuario";
             this.lblLoginUsuario.Size = new System.Drawing.Size(81, 31);
             this.lblLoginUsuario.TabIndex = 17;
@@ -117,7 +117,7 @@
             this.lblCadastro.AutoSize = true;
             this.lblCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastro.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCadastro.Location = new System.Drawing.Point(276, 361);
+            this.lblCadastro.Location = new System.Drawing.Point(250, 361);
             this.lblCadastro.Name = "lblCadastro";
             this.lblCadastro.Size = new System.Drawing.Size(96, 20);
             this.lblCadastro.TabIndex = 24;

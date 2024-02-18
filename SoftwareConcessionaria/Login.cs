@@ -15,9 +15,9 @@ namespace SoftwareConcessionaria
 {
     public partial class Login : Form
     {
-        string urlBase = "http://localhost:3000";
+        string urlBase = "https://wild-lion-khakis.cyclic.app";
         //string url = "https://wild-lion-khakis.cyclic.app";
-        string complemento = "http://localhost:3000/login";                   
+        string complemento = "https://wild-lion-khakis.cyclic.app/login";                   
         public Login()
         {
             InitializeComponent();            
@@ -118,48 +118,6 @@ namespace SoftwareConcessionaria
         private void txtResposta_Click(object sender, EventArgs e)
         {
 
-        }
-        /*
-        private async Task<string> TesteApiOnAsync()
-        {
-            try
-            {
-                using (var client = new HttpClient())
-                {
-                    HttpResponseMessage response = await client.GetAsync(urlBase);
-                    response.EnsureSuccessStatusCode();
-                    string responseBody = await response.Content.ReadAsStringAsync();
-                    return responseBody;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Erro ao consumir a API: {ex.Message}");
-                return null;
-            }
-        }
-
-        private async void Form_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                // Chama o método para consumir a API
-                string respostaApi = await TesteApiOnAsync();
-
-                // Verifica se a resposta não é nula antes de atribuir ao componente
-                if (respostaApi != null)
-                {
-                    txtResposta.Text = respostaApi;
-                }
-                else
-                {
-                    txtResposta.Text = "Erro ao consumir a API.";
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Erro ao carregar o formulário: {ex.Message}");
-            }
-        }*/
+        }        
     }
 }
