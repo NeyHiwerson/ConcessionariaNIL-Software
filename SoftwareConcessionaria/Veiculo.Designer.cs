@@ -35,7 +35,7 @@
             // 
             // btnVeiculoVeiculo
             // 
-            this.btnVeiculoVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVeiculoVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVeiculoVeiculo.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnVeiculoVeiculo.Location = new System.Drawing.Point(27, 12);
             this.btnVeiculoVeiculo.Name = "btnVeiculoVeiculo";

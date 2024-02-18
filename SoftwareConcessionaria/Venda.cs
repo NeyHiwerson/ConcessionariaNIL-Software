@@ -10,44 +10,35 @@ using System.Windows.Forms;
 
 namespace SoftwareConcessionaria
 {
-    public partial class ContatoCliente : Form
+    public partial class Venda : Form
     {
-        public ContatoCliente()
+        public Venda()
         {
             InitializeComponent();
         }
 
-        private void ContatoCliente_Load(object sender, EventArgs e)
+        private void Venda_Load(object sender, EventArgs e)
         {
 
         }
 
-        //btnClienteVeiculo
         private void btnVendaVeiculo_Click(object sender, EventArgs e)
-        {//btnClienteVeiculo
+        {
             this.Hide();
             Veiculo veiculo = new Veiculo();
             veiculo.Show();
         }
 
-        //btnClienteCliente
         private void btnVendaCliente_Click(object sender, EventArgs e)
-        {//btnClienteCliente
+        {
+            this.Hide();
+            ContatoCliente contatoCliente = new ContatoCliente();
+            contatoCliente.Show();
+        }
+
+        private void btnVendaVenda_Click(object sender, EventArgs e)
+        {
             //colocar uma cor como clique e não faz nada
         }
-
-        //btnClienteVenda
-        private void btnVendaVenda_Click(object sender, EventArgs e)
-        {//btnClienteVenda
-            this.Hide();
-            Venda venda = new Venda();
-            venda.Show();
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

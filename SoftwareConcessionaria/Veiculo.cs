@@ -36,7 +36,9 @@ namespace SoftwareConcessionaria
 
         private void btnVeiculoVenda_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Venda venda = new Venda();
+            venda.Show();
         }
     }
 }

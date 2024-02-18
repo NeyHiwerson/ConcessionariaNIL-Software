@@ -61,6 +61,7 @@
     <Compile Include="ContatoCliente.Designer.cs">
       <DependentUpon>ContatoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dependencias\models\VeiculoModel.cs" />
     <Compile Include="EsqueceuSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +81,12 @@
     </Compile>
     <Compile Include="Veiculo.Designer.cs">
       <DependentUpon>Veiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venda.Designer.cs">
+      <DependentUpon>Venda.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
@@ -104,6 +111,9 @@
     </Compile>
     <EmbeddedResource Include="Veiculo.resx">
       <DependentUpon>Veiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venda.resx">
+      <DependentUpon>Venda.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
