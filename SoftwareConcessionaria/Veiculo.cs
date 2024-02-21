@@ -38,6 +38,7 @@ namespace SoftwareConcessionaria
 
         private void btnVeiculoCliente_Click(object sender, EventArgs e)
         {
+
             ContatoCliente contatoCliente = ApplicationContext.Instance.contatoCliente;
 
             // Se o formulário ContatoCliente ainda não foi instanciado, crie uma nova instância
@@ -46,7 +47,7 @@ namespace SoftwareConcessionaria
                 contatoCliente = new ContatoCliente();
                 ApplicationContext.Instance.contatoCliente = contatoCliente;
                 contatoCliente.FormClosed += (s, args) => Show(); // Exibe o formulário principal quando o formulário ContatoCliente for fechado
-            }
+            }           
 
             contatoCliente.Show();
         }
