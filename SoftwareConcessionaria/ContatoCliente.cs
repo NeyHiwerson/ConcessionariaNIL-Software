@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SoftwareConcessionaria
 {
-    public partial class ContatoCliente : Form
+    public partial class z : Form
     {
-        public ContatoCliente()
+        public z()
         {
             InitializeComponent();
         }

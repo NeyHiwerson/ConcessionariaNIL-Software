@@ -37,7 +37,7 @@ namespace SoftwareConcessionaria
         private void btnVeiculoCliente_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ContatoCliente contatoCliente = new ContatoCliente();
+            z contatoCliente = new z();
             contatoCliente.Show();
         }
 
