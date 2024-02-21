@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Veiculo));
             this.btnVeiculoVeiculo = new System.Windows.Forms.Button();
             this.btnVeiculoCliente = new System.Windows.Forms.Button();
             this.btnVeiculoVenda = new System.Windows.Forms.Button();
@@ -97,6 +98,11 @@
             this.txtVeiDisponivel = new System.Windows.Forms.TextBox();
             this.btnVeiBuscarPorId = new System.Windows.Forms.Button();
             this.btnVeiLimpar = new System.Windows.Forms.Button();
+            this.btnVeiCriar = new System.Windows.Forms.Button();
+            this.btnVeiEditar = new System.Windows.Forms.Button();
+            this.picVeiLink1 = new System.Windows.Forms.PictureBox();
+            this.btnVeiAddLink1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picVeiLink1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVeiculoVeiculo
@@ -675,11 +681,55 @@
             this.btnVeiLimpar.UseVisualStyleBackColor = true;
             this.btnVeiLimpar.Click += new System.EventHandler(this.btnVeiLimpar_Click);
             // 
+            // btnVeiCriar
+            // 
+            this.btnVeiCriar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVeiCriar.BackgroundImage")));
+            this.btnVeiCriar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVeiCriar.Location = new System.Drawing.Point(138, 112);
+            this.btnVeiCriar.Name = "btnVeiCriar";
+            this.btnVeiCriar.Size = new System.Drawing.Size(60, 49);
+            this.btnVeiCriar.TabIndex = 91;
+            this.btnVeiCriar.UseVisualStyleBackColor = true;
+            this.btnVeiCriar.Click += new System.EventHandler(this.btnVeiCriar_Click);
+            // 
+            // btnVeiEditar
+            // 
+            this.btnVeiEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVeiEditar.BackgroundImage")));
+            this.btnVeiEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVeiEditar.Location = new System.Drawing.Point(214, 112);
+            this.btnVeiEditar.Name = "btnVeiEditar";
+            this.btnVeiEditar.Size = new System.Drawing.Size(60, 49);
+            this.btnVeiEditar.TabIndex = 92;
+            this.btnVeiEditar.UseVisualStyleBackColor = true;
+            // 
+            // picVeiLink1
+            // 
+            this.picVeiLink1.Location = new System.Drawing.Point(595, 303);
+            this.picVeiLink1.Name = "picVeiLink1";
+            this.picVeiLink1.Size = new System.Drawing.Size(100, 50);
+            this.picVeiLink1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picVeiLink1.TabIndex = 93;
+            this.picVeiLink1.TabStop = false;
+            // 
+            // btnVeiAddLink1
+            // 
+            this.btnVeiAddLink1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVeiAddLink1.BackgroundImage")));
+            this.btnVeiAddLink1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVeiAddLink1.Location = new System.Drawing.Point(701, 303);
+            this.btnVeiAddLink1.Name = "btnVeiAddLink1";
+            this.btnVeiAddLink1.Size = new System.Drawing.Size(42, 32);
+            this.btnVeiAddLink1.TabIndex = 94;
+            this.btnVeiAddLink1.UseVisualStyleBackColor = true;
+            // 
             // Veiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 881);
+            this.Controls.Add(this.btnVeiAddLink1);
+            this.Controls.Add(this.picVeiLink1);
+            this.Controls.Add(this.btnVeiEditar);
+            this.Controls.Add(this.btnVeiCriar);
             this.Controls.Add(this.btnVeiLimpar);
             this.Controls.Add(this.btnVeiBuscarPorId);
             this.Controls.Add(this.label32);
@@ -752,6 +802,7 @@
             this.Name = "Veiculo";
             this.Text = "Veiculo";
             this.Load += new System.EventHandler(this.Veiculo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picVeiLink1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -828,5 +879,9 @@
         private System.Windows.Forms.TextBox txtVeiDisponivel;
         private System.Windows.Forms.Button btnVeiBuscarPorId;
         private System.Windows.Forms.Button btnVeiLimpar;
+        private System.Windows.Forms.Button btnVeiCriar;
+        private System.Windows.Forms.Button btnVeiEditar;
+        private System.Windows.Forms.PictureBox picVeiLink1;
+        private System.Windows.Forms.Button btnVeiAddLink1;
     }
 }

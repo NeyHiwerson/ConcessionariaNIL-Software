@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SoftwareConcessionaria
 {
     public partial class Veiculo : Form
@@ -19,6 +20,7 @@ namespace SoftwareConcessionaria
         string url = "https://wild-lion-khakis.cyclic.app/estoque/veiculo";
         string idDoVeiculo = null;
         VeiculoModel veiculoModel = new VeiculoModel();
+        public TokenManager tokenManager { get; set; }
         public Veiculo()
         {
             InitializeComponent();
@@ -36,15 +38,32 @@ namespace SoftwareConcessionaria
 
         private void btnVeiculoCliente_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            z contatoCliente = new z();
+
+            ContatoCliente contatoCliente = ApplicationContext.Instance.contatoCliente;
+
+            // Se o formulário ContatoCliente ainda não foi instanciado, crie uma nova instância
+            if (contatoCliente == null)
+            {
+                contatoCliente = new ContatoCliente();
+                ApplicationContext.Instance.contatoCliente = contatoCliente;
+                contatoCliente.FormClosed += (s, args) => Show(); // Exibe o formulário principal quando o formulário ContatoCliente for fechado
+            }           
+
             contatoCliente.Show();
         }
 
         private void btnVeiculoVenda_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Venda venda = new Venda();
+            Venda venda = ApplicationContext.Instance.venda;
+
+            // Se o formulário Venda ainda não foi instanciado, crie uma nova instância
+            if (venda == null)
+            {
+                venda = new Venda();
+                ApplicationContext.Instance.venda = venda;
+                venda.FormClosed += (s, args) => Show(); // Exibe o formulário principal quando o formulário Venda for fechado
+            }
+
             venda.Show();
         }
 
@@ -182,6 +201,11 @@ namespace SoftwareConcessionaria
         static string stringBoolean(bool value)
         {
             return value ? "Sim" : "Não";
+        }
+
+        private void btnVeiCriar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

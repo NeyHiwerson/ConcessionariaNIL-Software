@@ -10,14 +10,17 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Windows.Forms;
 using System.Security.Policy;
+using SoftwareConcessionaria.Dependencias.models;
 
 namespace SoftwareConcessionaria
 {
     public partial class Login : Form
     {
-        string urlBase = "https://wild-lion-khakis.cyclic.app";
-        //string url = "https://wild-lion-khakis.cyclic.app";
-        string complemento = "https://wild-lion-khakis.cyclic.app/login";                   
+        //public Veiculo formVeiculo = new Veiculo();
+        string urlBase = "https://wild-lion-khakis.cyclic.app";        
+        string complemento = "https://wild-lion-khakis.cyclic.app/login";        
+        public TokenManager tokenManager = new TokenManager();
+
         public Login()
         {
             InitializeComponent();            
@@ -43,13 +46,7 @@ namespace SoftwareConcessionaria
             }
 
         }
-                
-        public class RespostaLogin
-        {
-            public string type { get; set; }
-            public string token { get; set; }
-        }
-
+        
         private async void btnLoginEntrar_Click(object sender, EventArgs e)
         {
             string email = txtLoginUsuario.Text;
@@ -79,9 +76,16 @@ namespace SoftwareConcessionaria
                     if (resposta.Result.IsSuccessStatusCode)
                     {
                         var retorno = resposta.Result.Content.ReadAsStringAsync();
-                        var tokenCriado = JsonConvert.DeserializeObject<RespostaLogin>(retorno.Result);
-                        this.Hide();
+                        TokenManager tokenManager = JsonConvert.DeserializeObject<TokenManager>(retorno.Result);
+                        txtLoginUsuario.Text = string.Empty;
+                        txtLoginSenha.Text = string.Empty;
+                        // Armazena o TokenManager na ApplicationContext
+                        ApplicationContext.Instance.tokenManager = tokenManager;
+
+                        // Instancia o formulário Veiculo e armazena na ApplicationContext
                         Veiculo veiculo = new Veiculo();
+                        ApplicationContext.Instance.veiculo = veiculo;
+
                         veiculo.Show();
 
                     }
@@ -91,7 +95,6 @@ namespace SoftwareConcessionaria
                         var erroObjeto = JsonConvert.DeserializeAnonymousType(erroResposta, new { message = "" });
                         MessageBox.Show("Erro: " + erroObjeto.message);
                     }
-
 
                 } 
             }
@@ -118,6 +121,11 @@ namespace SoftwareConcessionaria
         private void txtResposta_Click(object sender, EventArgs e)
         {
 
-        }        
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
