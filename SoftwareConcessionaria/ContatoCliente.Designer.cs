@@ -1,6 +1,6 @@
 ﻿namespace SoftwareConcessionaria
 {
-    partial class z
+    partial class ContatoCliente
     {
         /// <summary>
         /// Required designer variable.

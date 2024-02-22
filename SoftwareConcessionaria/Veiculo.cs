@@ -18,6 +18,7 @@ namespace SoftwareConcessionaria
     public partial class Veiculo : Form
     {
         string url = "https://wild-lion-khakis.cyclic.app/estoque/veiculo";
+        string urlVeiCriar = "https://wild-lion-khakis.cyclic.app/estoque/veiculo";
         string idDoVeiculo = null;
         VeiculoModel veiculoModel = new VeiculoModel();
         public TokenManager tokenManager { get; set; }
@@ -145,7 +146,7 @@ namespace SoftwareConcessionaria
                         txtVeiValor.Text = veiculoModel.valor.ToString("C");
                         txtVeiDisponivel.Text = stringBoolean(veiculoModel.disponivel);
 
-
+                        btnVeiCriar.Enabled = false;
 
                         MessageBox.Show("Dados do veículo carregados com sucesso!");
                     }
@@ -194,6 +195,10 @@ namespace SoftwareConcessionaria
             txtVeiValor.Text = "";
             txtVeiDisponivel.Text = "";
 
+            btnVeiCriar.Enabled = true;
+            btnVeiEditar.Enabled = false;
+            btnVeiAdicionarVenda.Enabled = false;
+
             MessageBox.Show("Campos limpos com sucesso!");
 
         }
@@ -203,7 +208,109 @@ namespace SoftwareConcessionaria
             return value ? "Sim" : "Não";
         }
 
-        private void btnVeiCriar_Click(object sender, EventArgs e)
+        private async void btnVeiCriar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtVeiIdVeiculo.Text))
+            {                
+                MessageBox.Show("O ID do veículo é gerado automaticamente pelo sistema. Por favor, não preencha o campo de ID ao criar um veículo.");
+            }
+            else if (string.IsNullOrWhiteSpace(txtVeiMarca.Text) || 
+                string.IsNullOrWhiteSpace(txtVeiModelo.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiTipo.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiCor.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiMotor.Text ) ||
+                string.IsNullOrWhiteSpace(txtVeiValvulas.Text ) ||
+                string.IsNullOrWhiteSpace(txtVeiCombustivel.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiCambio.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiValor.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiAnoFabricacao.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiAnoModelo.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiQuilometragem.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiCidade.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiEstado.Text))
+            {
+                //falta implementar a imagem1
+                MessageBox.Show("Preencha os dados minimos para criação do veículo:\nMarca, Modelo, Tipo, Cor, Motor, Valvulas, Combustível, Cambio, Valor, Ano de Fabricação, Ano Modelo, Quilometragem, Cidade, Estado e Imagem1.");
+            }
+            else
+            {
+                try
+                {
+                    //codigo para criar veiculo
+                    veiculoModel = new VeiculoModel();
+
+                    veiculoModel.codigo_renavam = txtVeiCodRenavan.Text;
+                    veiculoModel.placa = txtVeiPlaca.Text;
+                    veiculoModel.ano_fabricacao = txtVeiAnoFabricacao.Text;
+                    veiculoModel.ano_modelo = txtVeiAnoModelo.Text;
+                    veiculoModel.exercicio_atual = txtVeiAnoExercicioAtual.Text;
+                    veiculoModel.marca = txtVeiMarca.Text;
+                    veiculoModel.modelo = txtVeiModelo.Text;
+                    veiculoModel.versao = txtVeiVersao.Text;
+                    veiculoModel.especie = txtVeiEspecie.Text;
+                    veiculoModel.tipo = txtVeiTipo.Text;
+                    veiculoModel.chassi = txtVeiChassi.Text;
+                    veiculoModel.cor = txtVeiCor.Text;
+                    veiculoModel.combustivel = txtVeiCombustivel.Text;
+                    veiculoModel.categoria = txtVeiCategoria.Text;
+                    veiculoModel.potencia = txtVeiPotencia.Text;
+                    veiculoModel.motor = txtVeiMotor.Text;
+                    veiculoModel.valvulas = txtVeiValvulas.Text;
+                    veiculoModel.cambio = txtVeiCambio.Text;
+                    veiculoModel.peso = txtVeiPeso.Text;
+                    veiculoModel.eixos = txtVeiEixos.Text;
+                    veiculoModel.carroceria = txtVeiCarroceria.Text;
+                    veiculoModel.lotacao = txtVeiLotacao.Text;
+                    veiculoModel.capacidade = txtVeiCapacidade.Text;
+                    veiculoModel.quilometragem = txtVeiQuilometragem.Text;
+                    veiculoModel.portas = txtVeiPortas.Text;
+                    veiculoModel.cidade = txtVeiCidade.Text;
+                    veiculoModel.estado = txtVeiEstado.Text;
+                    veiculoModel.nome = txtVeiNome.Text;
+                    veiculoModel.cpfcnpj = txtVeiCpfCnpj.Text;
+                    veiculoModel.valor = (decimal)float.Parse(txtVeiValor.Text);
+                    //Implementar as imagens e os links
+
+
+                    using (var cliente = new HttpClient())
+                    {
+                        var jsonVeiculo = JsonConvert.SerializeObject(veiculoModel);
+                        var content = new StringContent(jsonVeiculo, Encoding.UTF8, "application/json");
+
+                        var resposta = await cliente.PostAsync(urlVeiCriar, content);
+
+                        if (resposta.IsSuccessStatusCode)
+                        {
+                            MessageBox.Show("Veículo criado com sucesso.");
+                            //refatorar e jogar as logicas em funçoes e chamar do botão
+                            //btnVeiLimpar_Click(sender, e);
+                            //txtVeiIdVeiculo.Text = resposta.Id;
+                            //btnVeiBuscarPorId_Click(sender, e);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Erro ao criar veículo. Código de status: {resposta.StatusCode}");
+                        }
+                    }
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro: {ex.Message}");
+                }
+
+            }
+            
+
+        }
+
+        private void btnVeiEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVeiAdicionarVenda_Click(object sender, EventArgs e)
         {
 
         }
