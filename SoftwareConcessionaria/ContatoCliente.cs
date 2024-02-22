@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SoftwareConcessionaria
 {
-    public partial class z : Form
+    public partial class ContatoCliente : Form
     {
-        public z()
+        public ContatoCliente()
         {
             InitializeComponent();
         }
@@ -49,5 +49,9 @@ namespace SoftwareConcessionaria
 
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

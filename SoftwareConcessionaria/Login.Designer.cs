@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblLoginEsqueceuSuaSenha = new System.Windows.Forms.Label();
             this.btnLoginEntrar = new System.Windows.Forms.Button();
             this.txtLoginSenha = new System.Windows.Forms.TextBox();
@@ -36,6 +37,11 @@
             this.lblLoginUsuario = new System.Windows.Forms.Label();
             this.txtResposta = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLoginEsqueceuSuaSenha
@@ -43,7 +49,7 @@
             this.lblLoginEsqueceuSuaSenha.AutoSize = true;
             this.lblLoginEsqueceuSuaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginEsqueceuSuaSenha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblLoginEsqueceuSuaSenha.Location = new System.Drawing.Point(249, 331);
+            this.lblLoginEsqueceuSuaSenha.Location = new System.Drawing.Point(404, 318);
             this.lblLoginEsqueceuSuaSenha.Name = "lblLoginEsqueceuSuaSenha";
             this.lblLoginEsqueceuSuaSenha.Size = new System.Drawing.Size(168, 20);
             this.lblLoginEsqueceuSuaSenha.TabIndex = 22;
@@ -54,7 +60,7 @@
             // 
             this.btnLoginEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoginEntrar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnLoginEntrar.Location = new System.Drawing.Point(253, 288);
+            this.btnLoginEntrar.Location = new System.Drawing.Point(408, 275);
             this.btnLoginEntrar.Name = "btnLoginEntrar";
             this.btnLoginEntrar.Size = new System.Drawing.Size(311, 40);
             this.btnLoginEntrar.TabIndex = 21;
@@ -65,7 +71,7 @@
             // txtLoginSenha
             // 
             this.txtLoginSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginSenha.Location = new System.Drawing.Point(253, 226);
+            this.txtLoginSenha.Location = new System.Drawing.Point(408, 213);
             this.txtLoginSenha.Name = "txtLoginSenha";
             this.txtLoginSenha.Size = new System.Drawing.Size(311, 32);
             this.txtLoginSenha.TabIndex = 20;
@@ -73,7 +79,7 @@
             // txtLoginUsuario
             // 
             this.txtLoginUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoginUsuario.Location = new System.Drawing.Point(253, 140);
+            this.txtLoginUsuario.Location = new System.Drawing.Point(408, 127);
             this.txtLoginUsuario.Name = "txtLoginUsuario";
             this.txtLoginUsuario.Size = new System.Drawing.Size(311, 32);
             this.txtLoginUsuario.TabIndex = 19;
@@ -83,7 +89,7 @@
             this.lblLoginSenha.AutoSize = true;
             this.lblLoginSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginSenha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblLoginSenha.Location = new System.Drawing.Point(248, 191);
+            this.lblLoginSenha.Location = new System.Drawing.Point(403, 178);
             this.lblLoginSenha.Name = "lblLoginSenha";
             this.lblLoginSenha.Size = new System.Drawing.Size(92, 31);
             this.lblLoginSenha.TabIndex = 18;
@@ -94,7 +100,7 @@
             this.lblLoginUsuario.AutoSize = true;
             this.lblLoginUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginUsuario.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblLoginUsuario.Location = new System.Drawing.Point(248, 100);
+            this.lblLoginUsuario.Location = new System.Drawing.Point(403, 87);
             this.lblLoginUsuario.Name = "lblLoginUsuario";
             this.lblLoginUsuario.Size = new System.Drawing.Size(81, 31);
             this.lblLoginUsuario.TabIndex = 17;
@@ -105,7 +111,7 @@
             this.txtResposta.AutoSize = true;
             this.txtResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResposta.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtResposta.Location = new System.Drawing.Point(43, 397);
+            this.txtResposta.Location = new System.Drawing.Point(12, 412);
             this.txtResposta.Name = "txtResposta";
             this.txtResposta.Size = new System.Drawing.Size(30, 20);
             this.txtResposta.TabIndex = 23;
@@ -117,18 +123,52 @@
             this.lblCadastro.AutoSize = true;
             this.lblCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastro.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCadastro.Location = new System.Drawing.Point(250, 361);
+            this.lblCadastro.Location = new System.Drawing.Point(405, 348);
             this.lblCadastro.Name = "lblCadastro";
             this.lblCadastro.Size = new System.Drawing.Size(96, 20);
             this.lblCadastro.TabIndex = 24;
             this.lblCadastro.Text = "Cadastre-se";
             this.lblCadastro.Click += new System.EventHandler(this.lblCadastro_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(81, 83);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(285, 285);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(649, 412);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Powered by";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(738, 397);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCadastro);
             this.Controls.Add(this.txtResposta);
             this.Controls.Add(this.lblLoginEsqueceuSuaSenha);
@@ -138,8 +178,11 @@
             this.Controls.Add(this.lblLoginSenha);
             this.Controls.Add(this.lblLoginUsuario);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +198,9 @@
         private System.Windows.Forms.Label lblLoginUsuario;
         private System.Windows.Forms.Label txtResposta;
         private System.Windows.Forms.Label lblCadastro;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
