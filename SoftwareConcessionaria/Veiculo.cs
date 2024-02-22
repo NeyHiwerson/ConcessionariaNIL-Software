@@ -8,6 +8,7 @@ using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +19,7 @@ namespace SoftwareConcessionaria
     public partial class Veiculo : Form
     {
         string url = "https://wild-lion-khakis.cyclic.app/estoque/veiculo";
-        string urlVeiCriar = "https://wild-lion-khakis.cyclic.app/estoque/veiculo";
+        string urlVeiCriar = "https://wild-lion-khakis.cyclic.app/veiculo";
         string idDoVeiculo = null;
         VeiculoModel veiculoModel = new VeiculoModel();
         public TokenManager tokenManager { get; set; }
@@ -145,6 +146,7 @@ namespace SoftwareConcessionaria
                         txtVeiCpfCnpj.Text = veiculoModel.cpfcnpj;
                         txtVeiValor.Text = veiculoModel.valor.ToString("C");
                         txtVeiDisponivel.Text = stringBoolean(veiculoModel.disponivel);
+                        txtVeiLink1.Text = veiculoModel.link_1;
 
                         btnVeiCriar.Enabled = false;
 
@@ -270,10 +272,12 @@ namespace SoftwareConcessionaria
                     veiculoModel.cpfcnpj = txtVeiCpfCnpj.Text;
                     veiculoModel.valor = (decimal)float.Parse(txtVeiValor.Text);
                     //Implementar as imagens e os links
+                    veiculoModel.link_1 = txtVeiLink1.Text;
 
 
                     using (var cliente = new HttpClient())
                     {
+                        cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(ApplicationContext.Instance.tokenManager.type, ApplicationContext.Instance.tokenManager.token);
                         var jsonVeiculo = JsonConvert.SerializeObject(veiculoModel);
                         var content = new StringContent(jsonVeiculo, Encoding.UTF8, "application/json");
 
@@ -311,6 +315,16 @@ namespace SoftwareConcessionaria
         }
 
         private void btnVeiAdicionarVenda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
         {
 
         }

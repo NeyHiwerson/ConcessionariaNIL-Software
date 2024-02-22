@@ -103,6 +103,8 @@
             this.picVeiLink1 = new System.Windows.Forms.PictureBox();
             this.btnVeiAddLink1 = new System.Windows.Forms.Button();
             this.btnVeiAdicionarVenda = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtVeiLink1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picVeiLink1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -734,11 +736,31 @@
             this.btnVeiAdicionarVenda.UseVisualStyleBackColor = true;
             this.btnVeiAdicionarVenda.Click += new System.EventHandler(this.btnVeiAdicionarVenda_Click);
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(709, 343);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(79, 13);
+            this.label33.TabIndex = 97;
+            this.label33.Text = "Imagem Link_1";
+            this.label33.Click += new System.EventHandler(this.label33_Click);
+            // 
+            // txtVeiLink1
+            // 
+            this.txtVeiLink1.Location = new System.Drawing.Point(595, 362);
+            this.txtVeiLink1.Name = "txtVeiLink1";
+            this.txtVeiLink1.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink1.TabIndex = 96;
+            this.txtVeiLink1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
             // Veiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 881);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.txtVeiLink1);
             this.Controls.Add(this.btnVeiAdicionarVenda);
             this.Controls.Add(this.btnVeiAddLink1);
             this.Controls.Add(this.picVeiLink1);
@@ -898,5 +920,7 @@
         private System.Windows.Forms.PictureBox picVeiLink1;
         private System.Windows.Forms.Button btnVeiAddLink1;
         private System.Windows.Forms.Button btnVeiAdicionarVenda;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox txtVeiLink1;
     }
 }
