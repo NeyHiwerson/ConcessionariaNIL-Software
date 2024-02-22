@@ -60,5 +60,10 @@ namespace SoftwareConcessionaria
         {
 
         }
+
+        private void txtTelefoneVendaVendedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
