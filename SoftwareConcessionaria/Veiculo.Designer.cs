@@ -105,6 +105,24 @@
             this.btnVeiAdicionarVenda = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.txtVeiLink1 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtVeiLink2 = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtVeiLink3 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txtVeiLink6 = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.txtVeiLink5 = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtVeiLink4 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.txtVeiLink10 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtVeiLink9 = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txtVeiLink8 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtVeiLink7 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picVeiLink1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -708,9 +726,9 @@
             // 
             // picVeiLink1
             // 
-            this.picVeiLink1.Location = new System.Drawing.Point(595, 303);
+            this.picVeiLink1.Location = new System.Drawing.Point(816, 85);
             this.picVeiLink1.Name = "picVeiLink1";
-            this.picVeiLink1.Size = new System.Drawing.Size(100, 50);
+            this.picVeiLink1.Size = new System.Drawing.Size(223, 130);
             this.picVeiLink1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picVeiLink1.TabIndex = 93;
             this.picVeiLink1.TabStop = false;
@@ -719,7 +737,7 @@
             // 
             this.btnVeiAddLink1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVeiAddLink1.BackgroundImage")));
             this.btnVeiAddLink1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVeiAddLink1.Location = new System.Drawing.Point(701, 303);
+            this.btnVeiAddLink1.Location = new System.Drawing.Point(997, 232);
             this.btnVeiAddLink1.Name = "btnVeiAddLink1";
             this.btnVeiAddLink1.Size = new System.Drawing.Size(42, 32);
             this.btnVeiAddLink1.TabIndex = 94;
@@ -739,7 +757,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(709, 343);
+            this.label33.Location = new System.Drawing.Point(706, 284);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(79, 13);
             this.label33.TabIndex = 97;
@@ -748,17 +766,179 @@
             // 
             // txtVeiLink1
             // 
-            this.txtVeiLink1.Location = new System.Drawing.Point(595, 362);
+            this.txtVeiLink1.Location = new System.Drawing.Point(592, 303);
             this.txtVeiLink1.Name = "txtVeiLink1";
             this.txtVeiLink1.Size = new System.Drawing.Size(466, 20);
             this.txtVeiLink1.TabIndex = 96;
             this.txtVeiLink1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(706, 336);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(79, 13);
+            this.label34.TabIndex = 99;
+            this.label34.Text = "Imagem Link_2";
+            // 
+            // txtVeiLink2
+            // 
+            this.txtVeiLink2.Location = new System.Drawing.Point(592, 355);
+            this.txtVeiLink2.Name = "txtVeiLink2";
+            this.txtVeiLink2.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink2.TabIndex = 98;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(706, 390);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(79, 13);
+            this.label35.TabIndex = 101;
+            this.label35.Text = "Imagem Link_3";
+            // 
+            // txtVeiLink3
+            // 
+            this.txtVeiLink3.Location = new System.Drawing.Point(592, 409);
+            this.txtVeiLink3.Name = "txtVeiLink3";
+            this.txtVeiLink3.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink3.TabIndex = 100;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(706, 550);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(79, 13);
+            this.label36.TabIndex = 107;
+            this.label36.Text = "Imagem Link_6";
+            // 
+            // txtVeiLink6
+            // 
+            this.txtVeiLink6.Location = new System.Drawing.Point(592, 569);
+            this.txtVeiLink6.Name = "txtVeiLink6";
+            this.txtVeiLink6.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink6.TabIndex = 106;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(706, 497);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(79, 13);
+            this.label37.TabIndex = 105;
+            this.label37.Text = "Imagem Link_5";
+            // 
+            // txtVeiLink5
+            // 
+            this.txtVeiLink5.Location = new System.Drawing.Point(592, 516);
+            this.txtVeiLink5.Name = "txtVeiLink5";
+            this.txtVeiLink5.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink5.TabIndex = 104;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(706, 444);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(79, 13);
+            this.label38.TabIndex = 103;
+            this.label38.Text = "Imagem Link_4";
+            // 
+            // txtVeiLink4
+            // 
+            this.txtVeiLink4.Location = new System.Drawing.Point(592, 463);
+            this.txtVeiLink4.Name = "txtVeiLink4";
+            this.txtVeiLink4.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink4.TabIndex = 102;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(706, 773);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(85, 13);
+            this.label39.TabIndex = 115;
+            this.label39.Text = "Imagem Link_10";
+            // 
+            // txtVeiLink10
+            // 
+            this.txtVeiLink10.Location = new System.Drawing.Point(592, 792);
+            this.txtVeiLink10.Name = "txtVeiLink10";
+            this.txtVeiLink10.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink10.TabIndex = 114;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(706, 716);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(79, 13);
+            this.label40.TabIndex = 113;
+            this.label40.Text = "Imagem Link_9";
+            // 
+            // txtVeiLink9
+            // 
+            this.txtVeiLink9.Location = new System.Drawing.Point(592, 735);
+            this.txtVeiLink9.Name = "txtVeiLink9";
+            this.txtVeiLink9.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink9.TabIndex = 112;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(706, 660);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(79, 13);
+            this.label41.TabIndex = 111;
+            this.label41.Text = "Imagem Link_8";
+            // 
+            // txtVeiLink8
+            // 
+            this.txtVeiLink8.Location = new System.Drawing.Point(592, 679);
+            this.txtVeiLink8.Name = "txtVeiLink8";
+            this.txtVeiLink8.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink8.TabIndex = 110;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(706, 605);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(79, 13);
+            this.label42.TabIndex = 109;
+            this.label42.Text = "Imagem Link_7";
+            // 
+            // txtVeiLink7
+            // 
+            this.txtVeiLink7.Location = new System.Drawing.Point(592, 624);
+            this.txtVeiLink7.Name = "txtVeiLink7";
+            this.txtVeiLink7.Size = new System.Drawing.Size(466, 20);
+            this.txtVeiLink7.TabIndex = 108;
             // 
             // Veiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 881);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.txtVeiLink10);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.txtVeiLink9);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.txtVeiLink8);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.txtVeiLink7);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.txtVeiLink6);
+            this.Controls.Add(this.label37);
+            this.Controls.Add(this.txtVeiLink5);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.txtVeiLink4);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.txtVeiLink3);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.txtVeiLink2);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.txtVeiLink1);
             this.Controls.Add(this.btnVeiAdicionarVenda);
@@ -922,5 +1102,23 @@
         private System.Windows.Forms.Button btnVeiAdicionarVenda;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox txtVeiLink1;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtVeiLink2;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txtVeiLink3;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox txtVeiLink6;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox txtVeiLink5;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox txtVeiLink4;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox txtVeiLink10;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox txtVeiLink9;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox txtVeiLink8;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox txtVeiLink7;
     }
 }

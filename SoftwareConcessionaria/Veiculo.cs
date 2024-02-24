@@ -166,7 +166,8 @@ namespace SoftwareConcessionaria
                 string.IsNullOrWhiteSpace(txtVeiAnoModelo.Text) ||
                 string.IsNullOrWhiteSpace(txtVeiQuilometragem.Text) ||
                 string.IsNullOrWhiteSpace(txtVeiCidade.Text) ||
-                string.IsNullOrWhiteSpace(txtVeiEstado.Text))
+                string.IsNullOrWhiteSpace(txtVeiEstado.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiLink1.Text))
             {
                 //falta implementar a imagem1
                 MessageBox.Show("Preencha os dados minimos para criação do veículo:\nMarca, Modelo, Tipo, Cor, Motor, Valvulas, Combustível, Cambio, Valor, Ano de Fabricação, Ano Modelo, Quilometragem, Cidade, Estado e Imagem1.");
@@ -235,10 +236,11 @@ namespace SoftwareConcessionaria
                 string.IsNullOrWhiteSpace(txtVeiAnoModelo.Text) ||
                 string.IsNullOrWhiteSpace(txtVeiQuilometragem.Text) ||
                 string.IsNullOrWhiteSpace(txtVeiCidade.Text) ||
-                string.IsNullOrWhiteSpace(txtVeiEstado.Text))
+                string.IsNullOrWhiteSpace(txtVeiEstado.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiLink1.Text))
             {
                 //falta implementar a imagem1
-                MessageBox.Show("Preencha os dados minimos para criação do veículo:\nMarca, Modelo, Tipo, Cor, Motor, Valvulas, Combustível, Cambio, Valor, Ano de Fabricação, Ano Modelo, Quilometragem, Cidade, Estado e Imagem1.");
+                MessageBox.Show("Preencha os dados minimos para publicação do veículo:\nMarca, Modelo, Tipo, Cor, Motor, Valvulas, Combustível, Cambio, Valor, Ano de Fabricação, Ano Modelo, Quilometragem, Cidade, Estado e Imagem1.");
             }
             else
             {
@@ -340,6 +342,15 @@ namespace SoftwareConcessionaria
             txtVeiValor.Text = "";
             txtVeiDisponivel.Text = "";
             txtVeiLink1.Text = "";
+            txtVeiLink2.Text = "";
+            txtVeiLink3.Text = "";
+            txtVeiLink4.Text = "";
+            txtVeiLink5.Text = "";
+            txtVeiLink6.Text = "";
+            txtVeiLink7.Text = "";
+            txtVeiLink8.Text = "";
+            txtVeiLink9.Text = "";
+            txtVeiLink10.Text = "";            
 
             btnVeiCriar.Enabled = true;
             btnVeiEditar.Enabled = false;
@@ -381,6 +392,15 @@ namespace SoftwareConcessionaria
             txtVeiValor.Text = veiculoModel.valor.ToString("C");
             txtVeiDisponivel.Text = stringBoolean(veiculoModel.disponivel);
             txtVeiLink1.Text = veiculoModel.link_1;
+            txtVeiLink2.Text = veiculoModel.link_2;
+            txtVeiLink3.Text = veiculoModel.link_3;
+            txtVeiLink4.Text = veiculoModel.link_4;
+            txtVeiLink5.Text = veiculoModel.link_5;
+            txtVeiLink6.Text = veiculoModel.link_6;
+            txtVeiLink7.Text = veiculoModel.link_7;
+            txtVeiLink8.Text = veiculoModel.link_8;
+            txtVeiLink9.Text = veiculoModel.link_9;
+            txtVeiLink10.Text = veiculoModel.link_10;
 
         }
 
@@ -449,6 +469,15 @@ namespace SoftwareConcessionaria
             veiculoModel.valor = valorNumerico;
             //Implementar as imagens e os links
             veiculoModel.link_1 = txtVeiLink1.Text;
+            veiculoModel.link_2 = txtVeiLink2.Text;
+            veiculoModel.link_3 = txtVeiLink3.Text;
+            veiculoModel.link_4 = txtVeiLink4.Text;
+            veiculoModel.link_5 = txtVeiLink5.Text;
+            veiculoModel.link_6 = txtVeiLink6.Text;
+            veiculoModel.link_7 = txtVeiLink7.Text;
+            veiculoModel.link_8 = txtVeiLink8.Text;
+            veiculoModel.link_9 = txtVeiLink9.Text;
+            veiculoModel.link_10 = txtVeiLink10.Text;
 
             return veiculoModel;
         }
