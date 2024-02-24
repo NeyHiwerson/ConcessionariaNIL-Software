@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.Contracts;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -20,6 +21,7 @@ namespace SoftwareConcessionaria
     {
         string url = "https://wild-lion-khakis.cyclic.app/estoque/veiculo";
         string urlVeiCriar = "https://wild-lion-khakis.cyclic.app/veiculo";
+        string urlVeiCriarTeste = "http://localhost:3000/veiculo";
         string idDoVeiculo = null;
         VeiculoModel veiculoModel = new VeiculoModel();
         public TokenManager tokenManager { get; set; }
@@ -140,6 +142,11 @@ namespace SoftwareConcessionaria
             return value ? "Sim" : "Não";
         }
 
+        static bool ConvertToBoolean(string userInput)
+        {
+            return userInput.Equals("Sim", StringComparison.OrdinalIgnoreCase);
+        }
+
         private async void btnVeiCriar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtVeiIdVeiculo.Text))
@@ -209,14 +216,83 @@ namespace SoftwareConcessionaria
 
         }
 
-        private void btnVeiEditar_Click(object sender, EventArgs e)
+        private async void btnVeiEditar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtVeiIdVeiculo.Text))
+            {
+                MessageBox.Show("O ID do veículo é obrigatório. Por favor, não preencha o campo de ID e busque o veículo para editar.");
+            }
+            else if (string.IsNullOrWhiteSpace(txtVeiMarca.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiModelo.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiTipo.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiCor.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiMotor.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiValvulas.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiCombustivel.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiCambio.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiValor.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiAnoFabricacao.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiAnoModelo.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiQuilometragem.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiCidade.Text) ||
+                string.IsNullOrWhiteSpace(txtVeiEstado.Text))
+            {
+                //falta implementar a imagem1
+                MessageBox.Show("Preencha os dados minimos para criação do veículo:\nMarca, Modelo, Tipo, Cor, Motor, Valvulas, Combustível, Cambio, Valor, Ano de Fabricação, Ano Modelo, Quilometragem, Cidade, Estado e Imagem1.");
+            }
+            else
+            {
+                try
+                {
+                    // Código para criar veículo
+                    VeiculoModel veiculoModel = montarVeiculo();
+                    var idDoVeiculo = txtVeiIdVeiculo.Text;
+                    var urlBase = $"{urlVeiCriarTeste}/{idDoVeiculo}";
+                    using (var cliente = new HttpClient())
+                    {
+                        cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(ApplicationContext.Instance.tokenManager.type, ApplicationContext.Instance.tokenManager.token);
+                        var jsonVeiculo = JsonConvert.SerializeObject(veiculoModel);
+                        var content = new StringContent(jsonVeiculo, Encoding.UTF8, "application/json");
+
+                        var resposta = await cliente.PostAsync(urlBase, content);
+
+                        if (resposta.IsSuccessStatusCode)
+                        {
+                            MessageBox.Show("Veículo Editado com sucesso.");
+
+                            // Aqui você precisa verificar a estrutura da resposta e ajustar conforme necessário
+                            // Supondo que a resposta contenha o VeiculoModel serializado diretamente
+                            var respostaContent = await resposta.Content.ReadAsStringAsync();
+                            veiculoModel = JsonConvert.DeserializeObject<VeiculoModel>(respostaContent);
+
+                            // Refatorar e jogar as lógicas em funções e chamar do botão
+                            limparFormulario();
+                            imprimeVeiculo(veiculoModel);
+                            btnVeiCriar.Enabled = false;
+                            btnVeiEditar.Enabled = true;
+                            btnVeiAdicionarVenda.Enabled = true;
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Erro ao criar veículo. Código de status: {resposta.StatusCode}");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro: {ex.Message}");
+                }
+            }
+
 
         }
 
         private void btnVeiAdicionarVenda_Click(object sender, EventArgs e)
         {
-
+            veiculoModel = montarVeiculo();
+            ApplicationContext.Instance.veiculoModel = veiculoModel;
+            MessageBox.Show("Veículo adicionado à área de vendas com sucesso.");
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -366,7 +442,11 @@ namespace SoftwareConcessionaria
             veiculoModel.estado = txtVeiEstado.Text;
             veiculoModel.nome = txtVeiNome.Text;
             veiculoModel.cpfcnpj = txtVeiCpfCnpj.Text;
-            veiculoModel.valor = (decimal)float.Parse(txtVeiValor.Text);
+            veiculoModel.disponivel = ConvertToBoolean(txtVeiDisponivel.Text);
+            string valorFormatado = txtVeiValor.Text;
+            decimal valorNumerico;
+            decimal.TryParse(valorFormatado, NumberStyles.Currency, CultureInfo.CurrentCulture, out valorNumerico);
+            veiculoModel.valor = valorNumerico;
             //Implementar as imagens e os links
             veiculoModel.link_1 = txtVeiLink1.Text;
 
