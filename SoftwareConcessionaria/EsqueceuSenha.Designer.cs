@@ -36,26 +36,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(254, 137);
+            this.label1.Location = new System.Drawing.Point(253, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 25);
+            this.label1.Size = new System.Drawing.Size(231, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Defina Seu E-mail";
             // 
             // txtDefinaSeuEmail
             // 
             this.txtDefinaSeuEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDefinaSeuEmail.Location = new System.Drawing.Point(259, 165);
+            this.txtDefinaSeuEmail.Location = new System.Drawing.Point(259, 152);
             this.txtDefinaSeuEmail.Name = "txtDefinaSeuEmail";
-            this.txtDefinaSeuEmail.Size = new System.Drawing.Size(214, 30);
+            this.txtDefinaSeuEmail.Size = new System.Drawing.Size(278, 30);
             this.txtDefinaSeuEmail.TabIndex = 1;
             // 
             // btnEsqueceuSenhaEnviar
             // 
+            this.btnEsqueceuSenhaEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEsqueceuSenhaEnviar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnEsqueceuSenhaEnviar.Location = new System.Drawing.Point(322, 220);
+            this.btnEsqueceuSenhaEnviar.Location = new System.Drawing.Point(354, 188);
             this.btnEsqueceuSenhaEnviar.Name = "btnEsqueceuSenhaEnviar";
             this.btnEsqueceuSenhaEnviar.Size = new System.Drawing.Size(84, 31);
             this.btnEsqueceuSenhaEnviar.TabIndex = 2;

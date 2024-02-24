@@ -429,6 +429,11 @@
             // 
             this.cbTipoEnderecoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoEnderecoVenda.FormattingEnabled = true;
+            this.cbTipoEnderecoVenda.Items.AddRange(new object[] {
+            "Público",
+            "Privado",
+            "Estático ",
+            "Dinâmico"});
             this.cbTipoEnderecoVenda.Location = new System.Drawing.Point(39, 374);
             this.cbTipoEnderecoVenda.Name = "cbTipoEnderecoVenda";
             this.cbTipoEnderecoVenda.Size = new System.Drawing.Size(137, 28);

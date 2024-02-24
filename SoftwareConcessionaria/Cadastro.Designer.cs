@@ -44,7 +44,7 @@
             // 
             this.btnCadEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadEntrar.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnCadEntrar.Location = new System.Drawing.Point(279, 404);
+            this.btnCadEntrar.Location = new System.Drawing.Point(290, 375);
             this.btnCadEntrar.Name = "btnCadEntrar";
             this.btnCadEntrar.Size = new System.Drawing.Size(247, 40);
             this.btnCadEntrar.TabIndex = 28;
@@ -55,18 +55,18 @@
             // txtCadEmail
             // 
             this.txtCadEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadEmail.Location = new System.Drawing.Point(279, 156);
+            this.txtCadEmail.Location = new System.Drawing.Point(192, 156);
             this.txtCadEmail.Name = "txtCadEmail";
-            this.txtCadEmail.Size = new System.Drawing.Size(247, 38);
+            this.txtCadEmail.Size = new System.Drawing.Size(428, 38);
             this.txtCadEmail.TabIndex = 25;
             this.txtCadEmail.TextChanged += new System.EventHandler(this.txtCadEmail_TextChanged);
             // 
             // txtCadNome
             // 
             this.txtCadNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadNome.Location = new System.Drawing.Point(279, 70);
+            this.txtCadNome.Location = new System.Drawing.Point(192, 70);
             this.txtCadNome.Name = "txtCadNome";
-            this.txtCadNome.Size = new System.Drawing.Size(247, 38);
+            this.txtCadNome.Size = new System.Drawing.Size(428, 38);
             this.txtCadNome.TabIndex = 24;
             this.txtCadNome.TextChanged += new System.EventHandler(this.txtCadNome_TextChanged);
             // 
@@ -75,7 +75,7 @@
             this.lblCadEmail.AutoSize = true;
             this.lblCadEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadEmail.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCadEmail.Location = new System.Drawing.Point(274, 121);
+            this.lblCadEmail.Location = new System.Drawing.Point(187, 121);
             this.lblCadEmail.Name = "lblCadEmail";
             this.lblCadEmail.Size = new System.Drawing.Size(81, 31);
             this.lblCadEmail.TabIndex = 23;
@@ -86,7 +86,7 @@
             this.lblCadNome.AutoSize = true;
             this.lblCadNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadNome.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCadNome.Location = new System.Drawing.Point(274, 30);
+            this.lblCadNome.Location = new System.Drawing.Point(187, 30);
             this.lblCadNome.Name = "lblCadNome";
             this.lblCadNome.Size = new System.Drawing.Size(86, 31);
             this.lblCadNome.TabIndex = 22;
@@ -95,18 +95,18 @@
             // txtCadConfirmaSenha
             // 
             this.txtCadConfirmaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadConfirmaSenha.Location = new System.Drawing.Point(279, 331);
+            this.txtCadConfirmaSenha.Location = new System.Drawing.Point(192, 331);
             this.txtCadConfirmaSenha.Name = "txtCadConfirmaSenha";
-            this.txtCadConfirmaSenha.Size = new System.Drawing.Size(247, 38);
+            this.txtCadConfirmaSenha.Size = new System.Drawing.Size(428, 38);
             this.txtCadConfirmaSenha.TabIndex = 27;
             this.txtCadConfirmaSenha.TextChanged += new System.EventHandler(this.txtCadConfirmaSenha_TextChanged);
             // 
             // txtCadSenha
             // 
             this.txtCadSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCadSenha.Location = new System.Drawing.Point(279, 245);
+            this.txtCadSenha.Location = new System.Drawing.Point(192, 245);
             this.txtCadSenha.Name = "txtCadSenha";
-            this.txtCadSenha.Size = new System.Drawing.Size(247, 38);
+            this.txtCadSenha.Size = new System.Drawing.Size(428, 38);
             this.txtCadSenha.TabIndex = 26;
             this.txtCadSenha.TextChanged += new System.EventHandler(this.txtCadSenha_TextChanged);
             // 
@@ -115,7 +115,7 @@
             this.lblCadConfirmaSenha.AutoSize = true;
             this.lblCadConfirmaSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadConfirmaSenha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCadConfirmaSenha.Location = new System.Drawing.Point(274, 296);
+            this.lblCadConfirmaSenha.Location = new System.Drawing.Point(187, 296);
             this.lblCadConfirmaSenha.Name = "lblCadConfirmaSenha";
             this.lblCadConfirmaSenha.Size = new System.Drawing.Size(209, 31);
             this.lblCadConfirmaSenha.TabIndex = 28;
@@ -126,7 +126,7 @@
             this.lblCadSenha.AutoSize = true;
             this.lblCadSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadSenha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCadSenha.Location = new System.Drawing.Point(274, 205);
+            this.lblCadSenha.Location = new System.Drawing.Point(187, 205);
             this.lblCadSenha.Name = "lblCadSenha";
             this.lblCadSenha.Size = new System.Drawing.Size(92, 31);
             this.lblCadSenha.TabIndex = 27;
@@ -137,7 +137,7 @@
             this.lblCadLogin.AutoSize = true;
             this.lblCadLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadLogin.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCadLogin.Location = new System.Drawing.Point(275, 473);
+            this.lblCadLogin.Location = new System.Drawing.Point(188, 434);
             this.lblCadLogin.Name = "lblCadLogin";
             this.lblCadLogin.Size = new System.Drawing.Size(132, 20);
             this.lblCadLogin.TabIndex = 29;
