@@ -21,7 +21,7 @@ namespace SoftwareConcessionaria
     {
         string url = "https://wild-lion-khakis.cyclic.app/estoque/veiculo";
         string urlVeiCriar = "https://wild-lion-khakis.cyclic.app/veiculo";
-        string urlVeiCriarTeste = "http://localhost:3000/veiculo";
+        //string urlVeiCriarTeste = "http://localhost:3000/veiculo";
         string idDoVeiculo = null;
         VeiculoModel veiculoModel = new VeiculoModel();
         public TokenManager tokenManager { get; set; }
@@ -247,7 +247,7 @@ namespace SoftwareConcessionaria
                     // Código para criar veículo
                     VeiculoModel veiculoModel = montarVeiculo();
                     var idDoVeiculo = txtVeiIdVeiculo.Text;
-                    var urlBase = $"{urlVeiCriarTeste}/{idDoVeiculo}";
+                    var urlBase = $"{urlVeiCriar}/{idDoVeiculo}";
                     using (var cliente = new HttpClient())
                     {
                         cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(ApplicationContext.Instance.tokenManager.type, ApplicationContext.Instance.tokenManager.token);
