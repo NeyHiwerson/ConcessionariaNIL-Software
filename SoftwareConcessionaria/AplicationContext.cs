@@ -16,6 +16,7 @@ namespace SoftwareConcessionaria
         public ContatoCliente contatoCliente { get; set; }
         public Venda venda { get; set; }
         public VeiculoModel veiculoModel { get; set; }
+        public ClienteModel clienteModel { get; set; }
 
         private static ApplicationContext instance;
 

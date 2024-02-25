@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContatoCliente));
             this.label2 = new System.Windows.Forms.Label();
             this.btnClienteVenda = new System.Windows.Forms.Button();
             this.btnClienteCliente = new System.Windows.Forms.Button();
             this.btnClienteVeiculo = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtCliNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCliEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCliDtNasc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCliRenda = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCliCpfCnpj = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCliTelefone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCliRg = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtCliCttTelefone = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,6 +68,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.cobTipoEndereco = new System.Windows.Forms.ComboBox();
+            this.btnCliAdicionarVenda = new System.Windows.Forms.Button();
+            this.btnCliEditar = new System.Windows.Forms.Button();
+            this.btnCliCriar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -125,13 +129,13 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "Nome";
             // 
-            // txtNome
+            // txtCliNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(33, 230);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(314, 26);
-            this.txtNome.TabIndex = 45;
+            this.txtCliNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliNome.Location = new System.Drawing.Point(33, 230);
+            this.txtCliNome.Name = "txtCliNome";
+            this.txtCliNome.Size = new System.Drawing.Size(314, 26);
+            this.txtCliNome.TabIndex = 45;
             // 
             // label3
             // 
@@ -143,13 +147,13 @@
             this.label3.TabIndex = 48;
             this.label3.Text = "E-mail";
             // 
-            // textBox1
+            // txtCliEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(33, 298);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(317, 26);
-            this.textBox1.TabIndex = 47;
+            this.txtCliEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliEmail.Location = new System.Drawing.Point(33, 298);
+            this.txtCliEmail.Name = "txtCliEmail";
+            this.txtCliEmail.Size = new System.Drawing.Size(317, 26);
+            this.txtCliEmail.TabIndex = 47;
             // 
             // label4
             // 
@@ -161,13 +165,13 @@
             this.label4.TabIndex = 50;
             this.label4.Text = "Data de nascimento";
             // 
-            // textBox2
+            // txtCliDtNasc
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(33, 370);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 26);
-            this.textBox2.TabIndex = 49;
+            this.txtCliDtNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliDtNasc.Location = new System.Drawing.Point(33, 370);
+            this.txtCliDtNasc.Name = "txtCliDtNasc";
+            this.txtCliDtNasc.Size = new System.Drawing.Size(197, 26);
+            this.txtCliDtNasc.TabIndex = 49;
             // 
             // label5
             // 
@@ -179,13 +183,13 @@
             this.label5.TabIndex = 52;
             this.label5.Text = "Renda";
             // 
-            // textBox3
+            // txtCliRenda
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(33, 434);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(195, 26);
-            this.textBox3.TabIndex = 51;
+            this.txtCliRenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliRenda.Location = new System.Drawing.Point(33, 434);
+            this.txtCliRenda.Name = "txtCliRenda";
+            this.txtCliRenda.Size = new System.Drawing.Size(195, 26);
+            this.txtCliRenda.TabIndex = 51;
             // 
             // label6
             // 
@@ -197,13 +201,13 @@
             this.label6.TabIndex = 54;
             this.label6.Text = "CPF/CNPJ";
             // 
-            // textBox4
+            // txtCliCpfCnpj
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(33, 162);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(195, 26);
-            this.textBox4.TabIndex = 53;
+            this.txtCliCpfCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliCpfCnpj.Location = new System.Drawing.Point(33, 162);
+            this.txtCliCpfCnpj.Name = "txtCliCpfCnpj";
+            this.txtCliCpfCnpj.Size = new System.Drawing.Size(195, 26);
+            this.txtCliCpfCnpj.TabIndex = 53;
             // 
             // label8
             // 
@@ -215,13 +219,13 @@
             this.label8.TabIndex = 56;
             this.label8.Text = "Telefone";
             // 
-            // textBox5
+            // txtCliTelefone
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(33, 565);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(133, 26);
-            this.textBox5.TabIndex = 55;
+            this.txtCliTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliTelefone.Location = new System.Drawing.Point(33, 565);
+            this.txtCliTelefone.Name = "txtCliTelefone";
+            this.txtCliTelefone.Size = new System.Drawing.Size(133, 26);
+            this.txtCliTelefone.TabIndex = 55;
             // 
             // label9
             // 
@@ -233,13 +237,13 @@
             this.label9.TabIndex = 58;
             this.label9.Text = "RG";
             // 
-            // textBox6
+            // txtCliRg
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(33, 499);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(133, 26);
-            this.textBox6.TabIndex = 57;
+            this.txtCliRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliRg.Location = new System.Drawing.Point(33, 499);
+            this.txtCliRg.Name = "txtCliRg";
+            this.txtCliRg.Size = new System.Drawing.Size(133, 26);
+            this.txtCliRg.TabIndex = 57;
             // 
             // label17
             // 
@@ -251,13 +255,13 @@
             this.label17.TabIndex = 60;
             this.label17.Text = "Contato De Ligação";
             // 
-            // textBox7
+            // txtCliCttTelefone
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(33, 632);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(133, 26);
-            this.textBox7.TabIndex = 59;
+            this.txtCliCttTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliCttTelefone.Location = new System.Drawing.Point(33, 632);
+            this.txtCliCttTelefone.Name = "txtCliCttTelefone";
+            this.txtCliCttTelefone.Size = new System.Drawing.Size(133, 26);
+            this.txtCliCttTelefone.TabIndex = 59;
             // 
             // btnLimpar
             // 
@@ -269,6 +273,7 @@
             this.btnLimpar.TabIndex = 92;
             this.btnLimpar.Text = "X";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnBuscar
             // 
@@ -440,11 +445,47 @@
             this.cobTipoEndereco.Size = new System.Drawing.Size(139, 28);
             this.cobTipoEndereco.TabIndex = 110;
             // 
+            // btnCliAdicionarVenda
+            // 
+            this.btnCliAdicionarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliAdicionarVenda.Location = new System.Drawing.Point(416, 202);
+            this.btnCliAdicionarVenda.Name = "btnCliAdicionarVenda";
+            this.btnCliAdicionarVenda.Size = new System.Drawing.Size(136, 49);
+            this.btnCliAdicionarVenda.TabIndex = 113;
+            this.btnCliAdicionarVenda.Text = "Adicionar a venda";
+            this.btnCliAdicionarVenda.UseVisualStyleBackColor = true;
+            this.btnCliAdicionarVenda.Click += new System.EventHandler(this.btnCliAdicionarVenda_Click);
+            // 
+            // btnCliEditar
+            // 
+            this.btnCliEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliEditar.BackgroundImage")));
+            this.btnCliEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCliEditar.Location = new System.Drawing.Point(492, 147);
+            this.btnCliEditar.Name = "btnCliEditar";
+            this.btnCliEditar.Size = new System.Drawing.Size(60, 49);
+            this.btnCliEditar.TabIndex = 112;
+            this.btnCliEditar.UseVisualStyleBackColor = true;
+            this.btnCliEditar.Click += new System.EventHandler(this.btnCliEditar_Click);
+            // 
+            // btnCliCriar
+            // 
+            this.btnCliCriar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliCriar.BackgroundImage")));
+            this.btnCliCriar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCliCriar.Location = new System.Drawing.Point(416, 147);
+            this.btnCliCriar.Name = "btnCliCriar";
+            this.btnCliCriar.Size = new System.Drawing.Size(60, 49);
+            this.btnCliCriar.TabIndex = 111;
+            this.btnCliCriar.UseVisualStyleBackColor = true;
+            this.btnCliCriar.Click += new System.EventHandler(this.btnCliCriar_Click);
+            // 
             // ContatoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 881);
+            this.Controls.Add(this.btnCliAdicionarVenda);
+            this.Controls.Add(this.btnCliEditar);
+            this.Controls.Add(this.btnCliCriar);
             this.Controls.Add(this.cobTipoEndereco);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtBairro);
@@ -465,21 +506,21 @@
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtCliCttTelefone);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtCliRg);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtCliTelefone);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtCliCpfCnpj);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCliRenda);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCliDtNasc);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCliEmail);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtCliNome);
             this.Controls.Add(this.btnClienteVenda);
             this.Controls.Add(this.btnClienteCliente);
             this.Controls.Add(this.btnClienteVeiculo);
@@ -498,21 +539,21 @@
         private System.Windows.Forms.Button btnClienteCliente;
         private System.Windows.Forms.Button btnClienteVeiculo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtCliNome;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCliEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCliDtNasc;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCliRenda;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCliCpfCnpj;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCliTelefone;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtCliRg;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtCliCttTelefone;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label1;
@@ -532,5 +573,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.ComboBox cobTipoEndereco;
+        private System.Windows.Forms.Button btnCliAdicionarVenda;
+        private System.Windows.Forms.Button btnCliEditar;
+        private System.Windows.Forms.Button btnCliCriar;
     }
 }

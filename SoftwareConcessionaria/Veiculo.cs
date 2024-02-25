@@ -168,8 +168,7 @@ namespace SoftwareConcessionaria
                 string.IsNullOrWhiteSpace(txtVeiCidade.Text) ||
                 string.IsNullOrWhiteSpace(txtVeiEstado.Text) ||
                 string.IsNullOrWhiteSpace(txtVeiLink1.Text))
-            {
-                //falta implementar a imagem1
+            {                
                 MessageBox.Show("Preencha os dados minimos para criação do veículo:\nMarca, Modelo, Tipo, Cor, Motor, Valvulas, Combustível, Cambio, Valor, Ano de Fabricação, Ano Modelo, Quilometragem, Cidade, Estado e Imagem1.");
             }
             else
