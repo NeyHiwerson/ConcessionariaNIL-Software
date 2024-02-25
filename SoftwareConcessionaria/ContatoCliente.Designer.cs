@@ -53,24 +53,27 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtCliNumero = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtRua = new System.Windows.Forms.TextBox();
+            this.txtCliRua = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtCep = new System.Windows.Forms.TextBox();
+            this.txtCliCep = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtId_Cidade = new System.Windows.Forms.TextBox();
+            this.txtCliCidade = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtId_Estado = new System.Windows.Forms.TextBox();
+            this.txtCliEstado = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtCliBairro = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
-            this.cobTipoEndereco = new System.Windows.Forms.ComboBox();
+            this.txtCliComplemento = new System.Windows.Forms.TextBox();
+            this.cbxCliTipoEndereco = new System.Windows.Forms.ComboBox();
             this.btnCliAdicionarVenda = new System.Windows.Forms.Button();
             this.btnCliEditar = new System.Windows.Forms.Button();
             this.btnCliCriar = new System.Windows.Forms.Button();
+            this.btnCliAddEndVenda = new System.Windows.Forms.Button();
+            this.btnCliEditarEndereco = new System.Windows.Forms.Button();
+            this.btnCliCriarEndereco = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -300,44 +303,44 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(558, 202);
+            this.label10.Location = new System.Drawing.Point(558, 338);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label10.Size = new System.Drawing.Size(81, 25);
             this.label10.TabIndex = 97;
             this.label10.Text = "Número";
             // 
-            // txtNumero
+            // txtCliNumero
             // 
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(563, 230);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(133, 26);
-            this.txtNumero.TabIndex = 96;
+            this.txtCliNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliNumero.Location = new System.Drawing.Point(563, 366);
+            this.txtCliNumero.Name = "txtCliNumero";
+            this.txtCliNumero.Size = new System.Drawing.Size(133, 26);
+            this.txtCliNumero.TabIndex = 96;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(558, 134);
+            this.label11.Location = new System.Drawing.Point(558, 270);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(47, 25);
             this.label11.TabIndex = 95;
             this.label11.Text = "Rua";
             // 
-            // txtRua
+            // txtCliRua
             // 
-            this.txtRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRua.Location = new System.Drawing.Point(563, 162);
-            this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(250, 26);
-            this.txtRua.TabIndex = 94;
+            this.txtCliRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliRua.Location = new System.Drawing.Point(563, 298);
+            this.txtCliRua.Name = "txtCliRua";
+            this.txtCliRua.Size = new System.Drawing.Size(250, 26);
+            this.txtCliRua.TabIndex = 94;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(558, 471);
+            this.label12.Location = new System.Drawing.Point(558, 134);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(146, 25);
             this.label12.TabIndex = 101;
@@ -347,19 +350,19 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(558, 406);
+            this.label13.Location = new System.Drawing.Point(558, 202);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 25);
             this.label13.TabIndex = 99;
             this.label13.Text = "Cep";
             // 
-            // txtCep
+            // txtCliCep
             // 
-            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.Location = new System.Drawing.Point(563, 434);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(133, 26);
-            this.txtCep.TabIndex = 98;
+            this.txtCliCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliCep.Location = new System.Drawing.Point(563, 230);
+            this.txtCliCep.Name = "txtCliCep";
+            this.txtCliCep.Size = new System.Drawing.Size(133, 26);
+            this.txtCliCep.TabIndex = 98;
             // 
             // label14
             // 
@@ -371,13 +374,13 @@
             this.label14.TabIndex = 105;
             this.label14.Text = "Cidade";
             // 
-            // txtId_Cidade
+            // txtCliCidade
             // 
-            this.txtId_Cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId_Cidade.Location = new System.Drawing.Point(563, 632);
-            this.txtId_Cidade.Name = "txtId_Cidade";
-            this.txtId_Cidade.Size = new System.Drawing.Size(167, 26);
-            this.txtId_Cidade.TabIndex = 104;
+            this.txtCliCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliCidade.Location = new System.Drawing.Point(563, 632);
+            this.txtCliCidade.Name = "txtCliCidade";
+            this.txtCliCidade.Size = new System.Drawing.Size(167, 26);
+            this.txtCliCidade.TabIndex = 104;
             // 
             // label15
             // 
@@ -389,61 +392,63 @@
             this.label15.TabIndex = 103;
             this.label15.Text = "Estado";
             // 
-            // txtId_Estado
+            // txtCliEstado
             // 
-            this.txtId_Estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId_Estado.Location = new System.Drawing.Point(563, 565);
-            this.txtId_Estado.Name = "txtId_Estado";
-            this.txtId_Estado.Size = new System.Drawing.Size(127, 26);
-            this.txtId_Estado.TabIndex = 102;
+            this.txtCliEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliEstado.Location = new System.Drawing.Point(563, 565);
+            this.txtCliEstado.Name = "txtCliEstado";
+            this.txtCliEstado.Size = new System.Drawing.Size(127, 26);
+            this.txtCliEstado.TabIndex = 102;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(558, 342);
+            this.label16.Location = new System.Drawing.Point(558, 478);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(63, 25);
             this.label16.TabIndex = 109;
             this.label16.Text = "Bairro";
             // 
-            // txtBairro
+            // txtCliBairro
             // 
-            this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(563, 370);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(250, 26);
-            this.txtBairro.TabIndex = 108;
+            this.txtCliBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliBairro.Location = new System.Drawing.Point(563, 506);
+            this.txtCliBairro.Name = "txtCliBairro";
+            this.txtCliBairro.Size = new System.Drawing.Size(250, 26);
+            this.txtCliBairro.TabIndex = 108;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(558, 270);
+            this.label18.Location = new System.Drawing.Point(558, 406);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(134, 25);
             this.label18.TabIndex = 107;
             this.label18.Text = "Complemento";
             // 
-            // txtComplemento
+            // txtCliComplemento
             // 
-            this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(563, 298);
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(250, 26);
-            this.txtComplemento.TabIndex = 106;
+            this.txtCliComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliComplemento.Location = new System.Drawing.Point(563, 434);
+            this.txtCliComplemento.Name = "txtCliComplemento";
+            this.txtCliComplemento.Size = new System.Drawing.Size(250, 26);
+            this.txtCliComplemento.TabIndex = 106;
             // 
-            // cobTipoEndereco
+            // cbxCliTipoEndereco
             // 
-            this.cobTipoEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cobTipoEndereco.FormattingEnabled = true;
-            this.cobTipoEndereco.Items.AddRange(new object[] {
-            "Resisdêncial",
+            this.cbxCliTipoEndereco.DisplayMember = "0";
+            this.cbxCliTipoEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCliTipoEndereco.FormattingEnabled = true;
+            this.cbxCliTipoEndereco.Items.AddRange(new object[] {
+            "Residencial",
             "Comercial"});
-            this.cobTipoEndereco.Location = new System.Drawing.Point(563, 499);
-            this.cobTipoEndereco.Name = "cobTipoEndereco";
-            this.cobTipoEndereco.Size = new System.Drawing.Size(139, 28);
-            this.cobTipoEndereco.TabIndex = 110;
+            this.cbxCliTipoEndereco.Location = new System.Drawing.Point(563, 162);
+            this.cbxCliTipoEndereco.Name = "cbxCliTipoEndereco";
+            this.cbxCliTipoEndereco.Size = new System.Drawing.Size(139, 28);
+            this.cbxCliTipoEndereco.TabIndex = 110;
+            this.cbxCliTipoEndereco.SelectedIndexChanged += new System.EventHandler(this.cbxCliTipoEndereco_SelectedIndexChanged);
             // 
             // btnCliAdicionarVenda
             // 
@@ -452,7 +457,7 @@
             this.btnCliAdicionarVenda.Name = "btnCliAdicionarVenda";
             this.btnCliAdicionarVenda.Size = new System.Drawing.Size(136, 49);
             this.btnCliAdicionarVenda.TabIndex = 113;
-            this.btnCliAdicionarVenda.Text = "Adicionar a venda";
+            this.btnCliAdicionarVenda.Text = "Adicionar cliente a venda";
             this.btnCliAdicionarVenda.UseVisualStyleBackColor = true;
             this.btnCliAdicionarVenda.Click += new System.EventHandler(this.btnCliAdicionarVenda_Click);
             // 
@@ -478,30 +483,66 @@
             this.btnCliCriar.UseVisualStyleBackColor = true;
             this.btnCliCriar.Click += new System.EventHandler(this.btnCliCriar_Click);
             // 
+            // btnCliAddEndVenda
+            // 
+            this.btnCliAddEndVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliAddEndVenda.Location = new System.Drawing.Point(723, 202);
+            this.btnCliAddEndVenda.Name = "btnCliAddEndVenda";
+            this.btnCliAddEndVenda.Size = new System.Drawing.Size(148, 49);
+            this.btnCliAddEndVenda.TabIndex = 116;
+            this.btnCliAddEndVenda.Text = "Adicionar endereco a venda";
+            this.btnCliAddEndVenda.UseVisualStyleBackColor = true;
+            this.btnCliAddEndVenda.Click += new System.EventHandler(this.btnCliAddEndVenda_Click);
+            // 
+            // btnCliEditarEndereco
+            // 
+            this.btnCliEditarEndereco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliEditarEndereco.BackgroundImage")));
+            this.btnCliEditarEndereco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCliEditarEndereco.Location = new System.Drawing.Point(799, 147);
+            this.btnCliEditarEndereco.Name = "btnCliEditarEndereco";
+            this.btnCliEditarEndereco.Size = new System.Drawing.Size(60, 49);
+            this.btnCliEditarEndereco.TabIndex = 115;
+            this.btnCliEditarEndereco.UseVisualStyleBackColor = true;
+            this.btnCliEditarEndereco.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnCliCriarEndereco
+            // 
+            this.btnCliCriarEndereco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliCriarEndereco.BackgroundImage")));
+            this.btnCliCriarEndereco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCliCriarEndereco.Location = new System.Drawing.Point(723, 147);
+            this.btnCliCriarEndereco.Name = "btnCliCriarEndereco";
+            this.btnCliCriarEndereco.Size = new System.Drawing.Size(60, 49);
+            this.btnCliCriarEndereco.TabIndex = 114;
+            this.btnCliCriarEndereco.UseVisualStyleBackColor = true;
+            this.btnCliCriarEndereco.Click += new System.EventHandler(this.btnCliCriarEndereco_Click);
+            // 
             // ContatoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 881);
+            this.Controls.Add(this.btnCliAddEndVenda);
+            this.Controls.Add(this.btnCliEditarEndereco);
+            this.Controls.Add(this.btnCliCriarEndereco);
             this.Controls.Add(this.btnCliAdicionarVenda);
             this.Controls.Add(this.btnCliEditar);
             this.Controls.Add(this.btnCliCriar);
-            this.Controls.Add(this.cobTipoEndereco);
+            this.Controls.Add(this.cbxCliTipoEndereco);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtBairro);
+            this.Controls.Add(this.txtCliBairro);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.txtComplemento);
+            this.Controls.Add(this.txtCliComplemento);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtId_Cidade);
+            this.Controls.Add(this.txtCliCidade);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtId_Estado);
+            this.Controls.Add(this.txtCliEstado);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtCep);
+            this.Controls.Add(this.txtCliCep);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.txtCliNumero);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtRua);
+            this.Controls.Add(this.txtCliRua);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnBuscar);
@@ -558,23 +599,26 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtCliNumero;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtRua;
+        private System.Windows.Forms.TextBox txtCliRua;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtCep;
+        private System.Windows.Forms.TextBox txtCliCep;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtId_Cidade;
+        private System.Windows.Forms.TextBox txtCliCidade;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtId_Estado;
+        private System.Windows.Forms.TextBox txtCliEstado;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtCliBairro;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.ComboBox cobTipoEndereco;
+        private System.Windows.Forms.TextBox txtCliComplemento;
+        private System.Windows.Forms.ComboBox cbxCliTipoEndereco;
         private System.Windows.Forms.Button btnCliAdicionarVenda;
         private System.Windows.Forms.Button btnCliEditar;
         private System.Windows.Forms.Button btnCliCriar;
+        private System.Windows.Forms.Button btnCliAddEndVenda;
+        private System.Windows.Forms.Button btnCliEditarEndereco;
+        private System.Windows.Forms.Button btnCliCriarEndereco;
     }
 }

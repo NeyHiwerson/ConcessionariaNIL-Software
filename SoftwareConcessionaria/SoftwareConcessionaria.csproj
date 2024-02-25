@@ -62,7 +62,9 @@
     <Compile Include="ContatoCliente.Designer.cs">
       <DependentUpon>ContatoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dependencias\models\CliEnderecoModel.cs" />
     <Compile Include="Dependencias\models\ClienteModel.cs" />
+    <Compile Include="Dependencias\models\EnderecoModel.cs" />
     <Compile Include="Dependencias\models\TokenManager.cs" />
     <Compile Include="Dependencias\models\VeiculoModel.cs" />
     <Compile Include="EsqueceuSenha.cs">
