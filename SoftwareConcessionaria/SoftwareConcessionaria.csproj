@@ -66,7 +66,9 @@
     <Compile Include="Dependencias\models\ClienteModel.cs" />
     <Compile Include="Dependencias\models\EnderecoModel.cs" />
     <Compile Include="Dependencias\models\TokenManager.cs" />
+    <Compile Include="Dependencias\models\ColaboradorModel.cs" />
     <Compile Include="Dependencias\models\VeiculoModel.cs" />
+    <Compile Include="Dependencias\models\VendaModel.cs" />
     <Compile Include="EsqueceuSenha.cs">
       <SubType>Form</SubType>
     </Compile>

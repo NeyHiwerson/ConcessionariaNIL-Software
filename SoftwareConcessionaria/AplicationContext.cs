@@ -18,7 +18,9 @@ namespace SoftwareConcessionaria
         public VeiculoModel veiculoModel { get; set; }
         public ClienteModel clienteModel { get; set; }
         public EnderecoModel enderecoModel {  get; set; } 
+        public int id_veiculo { get; set; }
         public int id_enderecoVenda { get; set; }
+        public ColaboradorModel colaboradorModel { get; set; }
 
 
         private static ApplicationContext instance;

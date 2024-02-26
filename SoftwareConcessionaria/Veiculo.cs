@@ -21,10 +21,9 @@ namespace SoftwareConcessionaria
     {
         string url = "https://wild-lion-khakis.cyclic.app/estoque/veiculo";
         string urlVeiCriar = "https://wild-lion-khakis.cyclic.app/veiculo";
-        //string urlVeiCriarTeste = "http://localhost:3000/veiculo";
-        string idDoVeiculo = null;
+        //string urlVeiCriarTeste = "http://localhost:3000/veiculo";        
         VeiculoModel veiculoModel = new VeiculoModel();
-        public TokenManager tokenManager { get; set; }
+        int id_veiculo = 0;
         public Veiculo()
         {
             InitializeComponent();
@@ -104,10 +103,10 @@ namespace SoftwareConcessionaria
             }
             else
             {
-                idDoVeiculo = txtVeiIdVeiculo.Text;                
+                id_veiculo = int.Parse(txtVeiIdVeiculo.Text);
                 try
                 {
-                    VeiculoModel veiculoModel = buscarVeiculoPorId(idDoVeiculo);
+                    VeiculoModel veiculoModel = buscarVeiculoPorId(id_veiculo);
 
                     if (veiculoModel != null)
                     {
@@ -247,8 +246,8 @@ namespace SoftwareConcessionaria
                 {
                     // Código para criar veículo
                     VeiculoModel veiculoModel = montarVeiculo();
-                    var idDoVeiculo = txtVeiIdVeiculo.Text;
-                    var urlBase = $"{urlVeiCriar}/{idDoVeiculo}";
+                    id_veiculo = int.Parse(txtVeiIdVeiculo.Text);
+                    var urlBase = $"{urlVeiCriar}/{id_veiculo}";
                     using (var cliente = new HttpClient())
                     {
                         cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(ApplicationContext.Instance.tokenManager.type, ApplicationContext.Instance.tokenManager.token);
@@ -291,6 +290,7 @@ namespace SoftwareConcessionaria
 
         private void btnVeiAdicionarVenda_Click(object sender, EventArgs e)
         {
+            ApplicationContext.Instance.id_veiculo = id_veiculo;
             veiculoModel = montarVeiculo();
             ApplicationContext.Instance.veiculoModel = veiculoModel;
             MessageBox.Show("Veículo adicionado à área de vendas com sucesso.");
@@ -403,10 +403,10 @@ namespace SoftwareConcessionaria
 
         }
 
-        public VeiculoModel buscarVeiculoPorId(string id)
+        public VeiculoModel buscarVeiculoPorId(int id)
         {
             VeiculoModel veiculoModel = new VeiculoModel();
-            var urlBase = $"{url}/{idDoVeiculo}";
+            var urlBase = $"{url}/{id_veiculo}";
             try
             {
                 using (var cliente = new HttpClient())

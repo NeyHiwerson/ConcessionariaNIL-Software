@@ -21,8 +21,9 @@ namespace SoftwareConcessionaria
     public partial class ContatoCliente : Form
     {
         string url = "https://wild-lion-khakis.cyclic.app/cliente";        
-        string urlTeste = "http://localhost:3000/cliente";
-        string urlEndTeste = "http://localhost:3000/endereco";
+        string urlEnd = "https://wild-lion-khakis.cyclic.app/endereco";
+        //string urlTeste = "http://localhost:3000/cliente";
+        //string urlEndTeste = "http://localhost:3000/endereco";
         string cpfcnpjCliente = null;
         int id_cliente = 0;
         int id_enderecoVenda = 0;
@@ -111,7 +112,7 @@ namespace SoftwareConcessionaria
                         btnCliEditar.Enabled = true;
                         btnCliAdicionarVenda.Enabled = true;
                         cliEnderecoModel.id_cliente = clienteModel.id_cliente;
-                        var id_cliente = clienteModel.id_cliente;
+                        id_cliente = clienteModel.id_cliente;
                         cliEnderecoModel.enderecos = await buscarEnderecosCliente(id_cliente);
                         imprimirEndereco(cliEnderecoModel);
                         MessageBox.Show("Dados do cliente carregados com sucesso!");
@@ -177,7 +178,7 @@ namespace SoftwareConcessionaria
                     cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(ApplicationContext.Instance.tokenManager.type, ApplicationContext.Instance.tokenManager.token);
 
                     // Construir a URL com o id como parte da consulta
-                    var urlBuscar = $"{urlEndTeste}/{id}";
+                    var urlBuscar = $"{urlEnd}/{id}";
 
                     // Fazer a requisição à API de forma assíncrona
                     var resposta = await cliente.GetAsync(urlBuscar);
@@ -216,6 +217,7 @@ namespace SoftwareConcessionaria
                 cbxCliTipoEndereco.SelectedIndex = 0;
                 btnCliAddEndVenda.Enabled = true;
                 enderecoModel = cliEnderecoModel.enderecos[0];
+                id_enderecoVenda = enderecoModel.id_endereco;
             }
             if (cliEnderecoModel.enderecos != null && cliEnderecoModel.enderecos.Count > 0)
             {
@@ -226,13 +228,14 @@ namespace SoftwareConcessionaria
                     // Se estiver selecionado Residencial
                     enderecoModel = cliEnderecoModel.enderecos.Find(e => e.tipo_endereco == "Residencial");
                     btnCliAddEndVenda.Enabled = true;
-                    
+                    id_enderecoVenda = enderecoModel.id_endereco;
                 }
                 else if (tipoEnderecoSelecionado == 1)
                 {
                     // Se estiver selecionado Comercial
                     enderecoModel = cliEnderecoModel.enderecos.Find(e => e.tipo_endereco == "Comercial");
                     btnCliAddEndVenda.Enabled = true;
+                    id_enderecoVenda = enderecoModel.id_endereco;
                 }
 
                 if (enderecoModel != null)
@@ -426,7 +429,7 @@ namespace SoftwareConcessionaria
                 id_cliente = clienteModel.id_cliente;
                 clienteModel = montarClienteModel();
                 clienteModel.id_cliente = id_cliente;
-                var urlEditar = $"{urlTeste}/{id_cliente}";
+                var urlEditar = $"{url}/{id_cliente}";
 
                 try
                 {
@@ -464,13 +467,14 @@ namespace SoftwareConcessionaria
         private void btnCliAdicionarVenda_Click(object sender, EventArgs e)
         {
             clienteModel = montarClienteModel();
+            clienteModel.id_cliente = id_cliente;
             ApplicationContext.Instance.clienteModel = clienteModel;
             MessageBox.Show("Cliente adicionado à área de vendas com sucesso.");
         }
 
         //btnCliEditarEndereco
         private async void button2_Click(object sender, EventArgs e)
-        {//btnCliEditarEndereco---------------------------------------------------------------
+        {//btnCliEditarEnderec
             if (cbxCliTipoEndereco.SelectedIndex < 0 ||
                 string.IsNullOrWhiteSpace(txtCliCep.Text) ||
                 string.IsNullOrWhiteSpace(txtCliRua.Text) ||
@@ -495,7 +499,7 @@ namespace SoftwareConcessionaria
                         cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(ApplicationContext.Instance.tokenManager.type, ApplicationContext.Instance.tokenManager.token);
 
                         // Construir a URL com o id_cliente e id_endereco como parte da consulta
-                        var urlEditar = $"{urlEndTeste}/{id_endereco}";
+                        var urlEditar = $"{urlEnd}/{id_endereco}";
 
                         var jsonEnderecoModel = JsonConvert.SerializeObject(enderecoModel);
                         var content = new StringContent(jsonEnderecoModel, Encoding.UTF8, "application/json");
@@ -530,8 +534,11 @@ namespace SoftwareConcessionaria
         }
 
         private void btnCliAddEndVenda_Click(object sender, EventArgs e)
-        {            
-            ApplicationContext.Instance.id_enderecoVenda = id_enderecoVenda;
+        {
+            id_enderecoVenda = enderecoModel.id_endereco;
+            EnderecoModel enderecoModelVenda = montarEnderecoModel();
+            enderecoModelVenda.id_endereco = id_enderecoVenda;
+            ApplicationContext.Instance.enderecoModel = enderecoModelVenda;
             MessageBox.Show("Endereco do cliente adicionado à área de vendas com sucesso.");
         }
 
@@ -560,7 +567,7 @@ namespace SoftwareConcessionaria
                         cliente.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(ApplicationContext.Instance.tokenManager.type, ApplicationContext.Instance.tokenManager.token);
 
                         // Construir a URL com o id como parte da consulta
-                        var urlBuscar = $"{urlEndTeste}/{id_cliente}";
+                        var urlBuscar = $"{urlEnd}/{id_cliente}";
 
                         var jsonEnderecoModel = JsonConvert.SerializeObject(enderecoModel);
                         var content = new StringContent(jsonEnderecoModel, Encoding.UTF8, "application/json");

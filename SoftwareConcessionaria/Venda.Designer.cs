@@ -41,21 +41,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCodigoRenavamVendaVeiculo = new System.Windows.Forms.TextBox();
+            this.txtVenRenavan = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtChassiVendaVeiculo = new System.Windows.Forms.TextBox();
+            this.txtVenChassi = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtAnoVeiculoVenda = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtNomeVeiculoVenda = new System.Windows.Forms.TextBox();
+            this.txtVenAno = new System.Windows.Forms.TextBox();
+            this.labelMarca = new System.Windows.Forms.Label();
+            this.txtVenMarca = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtBairroVenda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtComplementoVenda = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtId_Cidade = new System.Windows.Forms.TextBox();
+            this.txtCidadeVenda = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtId_Estado = new System.Windows.Forms.TextBox();
+            this.txtEstadoVenda = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtCepVenda = new System.Windows.Forms.TextBox();
@@ -63,11 +63,10 @@
             this.txtNumeroVenda = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtRuaVenda = new System.Windows.Forms.TextBox();
-            this.cbTipoEnderecoVenda = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.txtModeloVendaVeiculo = new System.Windows.Forms.TextBox();
+            this.txtVenModelo = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtPesoVendaVeiculo = new System.Windows.Forms.TextBox();
+            this.txtVenPeso = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNomeVendaVendedor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,10 +74,16 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtTelefoneVendaVendedor = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.txtFliliaVendaFilial = new System.Windows.Forms.TextBox();
+            this.txtVenNomeFilial = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtIdVendedor = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtContatoVenda = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtVenValor = new System.Windows.Forms.TextBox();
+            this.txtTipoEndVenda = new System.Windows.Forms.TextBox();
+            this.btnVenGerarVenda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnVendaVenda
@@ -121,7 +126,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(32, 264);
+            this.label31.Location = new System.Drawing.Point(32, 196);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(89, 25);
             this.label31.TabIndex = 94;
@@ -131,7 +136,7 @@
             // 
             this.txtTelefoneVenda.BackColor = System.Drawing.Color.White;
             this.txtTelefoneVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefoneVenda.Location = new System.Drawing.Point(37, 292);
+            this.txtTelefoneVenda.Location = new System.Drawing.Point(37, 224);
             this.txtTelefoneVenda.Name = "txtTelefoneVenda";
             this.txtTelefoneVenda.ReadOnly = true;
             this.txtTelefoneVenda.Size = new System.Drawing.Size(196, 26);
@@ -160,7 +165,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(32, 196);
+            this.label18.Location = new System.Drawing.Point(282, 128);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(64, 25);
             this.label18.TabIndex = 90;
@@ -170,10 +175,10 @@
             // 
             this.txtNomeVenda.BackColor = System.Drawing.Color.White;
             this.txtNomeVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeVenda.Location = new System.Drawing.Point(37, 224);
+            this.txtNomeVenda.Location = new System.Drawing.Point(287, 156);
             this.txtNomeVenda.Name = "txtNomeVenda";
             this.txtNomeVenda.ReadOnly = true;
-            this.txtNomeVenda.Size = new System.Drawing.Size(196, 26);
+            this.txtNomeVenda.Size = new System.Drawing.Size(345, 26);
             this.txtNomeVenda.TabIndex = 89;
             // 
             // label1
@@ -216,15 +221,15 @@
             this.label8.TabIndex = 115;
             this.label8.Text = "Código Da Renavam";
             // 
-            // txtCodigoRenavamVendaVeiculo
+            // txtVenRenavan
             // 
-            this.txtCodigoRenavamVendaVeiculo.BackColor = System.Drawing.Color.White;
-            this.txtCodigoRenavamVendaVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoRenavamVendaVeiculo.Location = new System.Drawing.Point(683, 493);
-            this.txtCodigoRenavamVendaVeiculo.Name = "txtCodigoRenavamVendaVeiculo";
-            this.txtCodigoRenavamVendaVeiculo.ReadOnly = true;
-            this.txtCodigoRenavamVendaVeiculo.Size = new System.Drawing.Size(196, 26);
-            this.txtCodigoRenavamVendaVeiculo.TabIndex = 114;
+            this.txtVenRenavan.BackColor = System.Drawing.Color.White;
+            this.txtVenRenavan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVenRenavan.Location = new System.Drawing.Point(683, 493);
+            this.txtVenRenavan.Name = "txtVenRenavan";
+            this.txtVenRenavan.ReadOnly = true;
+            this.txtVenRenavan.Size = new System.Drawing.Size(196, 26);
+            this.txtVenRenavan.TabIndex = 114;
             // 
             // label9
             // 
@@ -236,15 +241,15 @@
             this.label9.TabIndex = 113;
             this.label9.Text = "Chassi";
             // 
-            // txtChassiVendaVeiculo
+            // txtVenChassi
             // 
-            this.txtChassiVendaVeiculo.BackColor = System.Drawing.Color.White;
-            this.txtChassiVendaVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChassiVendaVeiculo.Location = new System.Drawing.Point(683, 360);
-            this.txtChassiVendaVeiculo.Name = "txtChassiVendaVeiculo";
-            this.txtChassiVendaVeiculo.ReadOnly = true;
-            this.txtChassiVendaVeiculo.Size = new System.Drawing.Size(196, 26);
-            this.txtChassiVendaVeiculo.TabIndex = 112;
+            this.txtVenChassi.BackColor = System.Drawing.Color.White;
+            this.txtVenChassi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVenChassi.Location = new System.Drawing.Point(683, 360);
+            this.txtVenChassi.Name = "txtVenChassi";
+            this.txtVenChassi.ReadOnly = true;
+            this.txtVenChassi.Size = new System.Drawing.Size(196, 26);
+            this.txtVenChassi.TabIndex = 112;
             // 
             // label10
             // 
@@ -257,42 +262,42 @@
             this.label10.Text = "Ano";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // txtAnoVeiculoVenda
+            // txtVenAno
             // 
-            this.txtAnoVeiculoVenda.BackColor = System.Drawing.Color.White;
-            this.txtAnoVeiculoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnoVeiculoVenda.Location = new System.Drawing.Point(683, 224);
-            this.txtAnoVeiculoVenda.Name = "txtAnoVeiculoVenda";
-            this.txtAnoVeiculoVenda.ReadOnly = true;
-            this.txtAnoVeiculoVenda.Size = new System.Drawing.Size(196, 26);
-            this.txtAnoVeiculoVenda.TabIndex = 110;
-            this.txtAnoVeiculoVenda.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtVenAno.BackColor = System.Drawing.Color.White;
+            this.txtVenAno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVenAno.Location = new System.Drawing.Point(683, 224);
+            this.txtVenAno.Name = "txtVenAno";
+            this.txtVenAno.ReadOnly = true;
+            this.txtVenAno.Size = new System.Drawing.Size(196, 26);
+            this.txtVenAno.TabIndex = 110;
+            this.txtVenAno.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // label11
+            // labelMarca
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(678, 128);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 25);
-            this.label11.TabIndex = 109;
-            this.label11.Text = "Nome";
+            this.labelMarca.AutoSize = true;
+            this.labelMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMarca.Location = new System.Drawing.Point(678, 128);
+            this.labelMarca.Name = "labelMarca";
+            this.labelMarca.Size = new System.Drawing.Size(67, 25);
+            this.labelMarca.TabIndex = 109;
+            this.labelMarca.Text = "Marca";
             // 
-            // txtNomeVeiculoVenda
+            // txtVenMarca
             // 
-            this.txtNomeVeiculoVenda.BackColor = System.Drawing.Color.White;
-            this.txtNomeVeiculoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeVeiculoVenda.Location = new System.Drawing.Point(683, 156);
-            this.txtNomeVeiculoVenda.Name = "txtNomeVeiculoVenda";
-            this.txtNomeVeiculoVenda.ReadOnly = true;
-            this.txtNomeVeiculoVenda.Size = new System.Drawing.Size(196, 26);
-            this.txtNomeVeiculoVenda.TabIndex = 108;
+            this.txtVenMarca.BackColor = System.Drawing.Color.White;
+            this.txtVenMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVenMarca.Location = new System.Drawing.Point(683, 156);
+            this.txtVenMarca.Name = "txtVenMarca";
+            this.txtVenMarca.ReadOnly = true;
+            this.txtVenMarca.Size = new System.Drawing.Size(196, 26);
+            this.txtVenMarca.TabIndex = 108;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(328, 196);
+            this.label16.Location = new System.Drawing.Point(346, 400);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(63, 25);
             this.label16.TabIndex = 130;
@@ -302,7 +307,7 @@
             // 
             this.txtBairroVenda.BackColor = System.Drawing.Color.White;
             this.txtBairroVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairroVenda.Location = new System.Drawing.Point(333, 224);
+            this.txtBairroVenda.Location = new System.Drawing.Point(351, 428);
             this.txtBairroVenda.Name = "txtBairroVenda";
             this.txtBairroVenda.ReadOnly = true;
             this.txtBairroVenda.Size = new System.Drawing.Size(250, 26);
@@ -312,7 +317,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(328, 128);
+            this.label4.Location = new System.Drawing.Point(32, 400);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 25);
             this.label4.TabIndex = 128;
@@ -322,7 +327,7 @@
             // 
             this.txtComplementoVenda.BackColor = System.Drawing.Color.White;
             this.txtComplementoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplementoVenda.Location = new System.Drawing.Point(333, 156);
+            this.txtComplementoVenda.Location = new System.Drawing.Point(37, 428);
             this.txtComplementoVenda.Name = "txtComplementoVenda";
             this.txtComplementoVenda.ReadOnly = true;
             this.txtComplementoVenda.Size = new System.Drawing.Size(250, 26);
@@ -332,47 +337,47 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(328, 400);
+            this.label14.Location = new System.Drawing.Point(32, 476);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(75, 25);
             this.label14.TabIndex = 126;
             this.label14.Text = "Cidade";
             // 
-            // txtId_Cidade
+            // txtCidadeVenda
             // 
-            this.txtId_Cidade.BackColor = System.Drawing.Color.White;
-            this.txtId_Cidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId_Cidade.Location = new System.Drawing.Point(333, 428);
-            this.txtId_Cidade.Name = "txtId_Cidade";
-            this.txtId_Cidade.ReadOnly = true;
-            this.txtId_Cidade.Size = new System.Drawing.Size(167, 26);
-            this.txtId_Cidade.TabIndex = 125;
+            this.txtCidadeVenda.BackColor = System.Drawing.Color.White;
+            this.txtCidadeVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidadeVenda.Location = new System.Drawing.Point(37, 504);
+            this.txtCidadeVenda.Name = "txtCidadeVenda";
+            this.txtCidadeVenda.ReadOnly = true;
+            this.txtCidadeVenda.Size = new System.Drawing.Size(167, 26);
+            this.txtCidadeVenda.TabIndex = 125;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(328, 332);
+            this.label15.Location = new System.Drawing.Point(346, 476);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 25);
             this.label15.TabIndex = 124;
             this.label15.Text = "Estado";
             // 
-            // txtId_Estado
+            // txtEstadoVenda
             // 
-            this.txtId_Estado.BackColor = System.Drawing.Color.White;
-            this.txtId_Estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId_Estado.Location = new System.Drawing.Point(333, 360);
-            this.txtId_Estado.Name = "txtId_Estado";
-            this.txtId_Estado.ReadOnly = true;
-            this.txtId_Estado.Size = new System.Drawing.Size(127, 26);
-            this.txtId_Estado.TabIndex = 123;
+            this.txtEstadoVenda.BackColor = System.Drawing.Color.White;
+            this.txtEstadoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstadoVenda.Location = new System.Drawing.Point(351, 504);
+            this.txtEstadoVenda.Name = "txtEstadoVenda";
+            this.txtEstadoVenda.ReadOnly = true;
+            this.txtEstadoVenda.Size = new System.Drawing.Size(127, 26);
+            this.txtEstadoVenda.TabIndex = 123;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(32, 332);
+            this.label12.Location = new System.Drawing.Point(32, 264);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(146, 25);
             this.label12.TabIndex = 122;
@@ -382,7 +387,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(328, 264);
+            this.label13.Location = new System.Drawing.Point(346, 264);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 25);
             this.label13.TabIndex = 121;
@@ -392,7 +397,7 @@
             // 
             this.txtCepVenda.BackColor = System.Drawing.Color.White;
             this.txtCepVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCepVenda.Location = new System.Drawing.Point(333, 292);
+            this.txtCepVenda.Location = new System.Drawing.Point(351, 292);
             this.txtCepVenda.Name = "txtCepVenda";
             this.txtCepVenda.ReadOnly = true;
             this.txtCepVenda.Size = new System.Drawing.Size(133, 26);
@@ -402,7 +407,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(32, 465);
+            this.label5.Location = new System.Drawing.Point(346, 332);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(81, 25);
@@ -413,7 +418,7 @@
             // 
             this.txtNumeroVenda.BackColor = System.Drawing.Color.White;
             this.txtNumeroVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroVenda.Location = new System.Drawing.Point(37, 493);
+            this.txtNumeroVenda.Location = new System.Drawing.Point(351, 360);
             this.txtNumeroVenda.Name = "txtNumeroVenda";
             this.txtNumeroVenda.ReadOnly = true;
             this.txtNumeroVenda.Size = new System.Drawing.Size(133, 26);
@@ -423,7 +428,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(32, 400);
+            this.label17.Location = new System.Drawing.Point(32, 332);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(47, 25);
             this.label17.TabIndex = 117;
@@ -433,21 +438,11 @@
             // 
             this.txtRuaVenda.BackColor = System.Drawing.Color.White;
             this.txtRuaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRuaVenda.Location = new System.Drawing.Point(37, 428);
+            this.txtRuaVenda.Location = new System.Drawing.Point(37, 360);
             this.txtRuaVenda.Name = "txtRuaVenda";
             this.txtRuaVenda.ReadOnly = true;
-            this.txtRuaVenda.Size = new System.Drawing.Size(250, 26);
+            this.txtRuaVenda.Size = new System.Drawing.Size(299, 26);
             this.txtRuaVenda.TabIndex = 116;
-            // 
-            // cbTipoEnderecoVenda
-            // 
-            this.cbTipoEnderecoVenda.BackColor = System.Drawing.Color.White;
-            this.cbTipoEnderecoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTipoEnderecoVenda.FormattingEnabled = true;
-            this.cbTipoEnderecoVenda.Location = new System.Drawing.Point(37, 360);
-            this.cbTipoEnderecoVenda.Name = "cbTipoEnderecoVenda";
-            this.cbTipoEnderecoVenda.Size = new System.Drawing.Size(137, 28);
-            this.cbTipoEnderecoVenda.TabIndex = 131;
             // 
             // label19
             // 
@@ -459,15 +454,15 @@
             this.label19.TabIndex = 133;
             this.label19.Text = "Modelo";
             // 
-            // txtModeloVendaVeiculo
+            // txtVenModelo
             // 
-            this.txtModeloVendaVeiculo.BackColor = System.Drawing.Color.White;
-            this.txtModeloVendaVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModeloVendaVeiculo.Location = new System.Drawing.Point(683, 292);
-            this.txtModeloVendaVeiculo.Name = "txtModeloVendaVeiculo";
-            this.txtModeloVendaVeiculo.ReadOnly = true;
-            this.txtModeloVendaVeiculo.Size = new System.Drawing.Size(196, 26);
-            this.txtModeloVendaVeiculo.TabIndex = 132;
+            this.txtVenModelo.BackColor = System.Drawing.Color.White;
+            this.txtVenModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVenModelo.Location = new System.Drawing.Point(683, 292);
+            this.txtVenModelo.Name = "txtVenModelo";
+            this.txtVenModelo.ReadOnly = true;
+            this.txtVenModelo.Size = new System.Drawing.Size(196, 26);
+            this.txtVenModelo.TabIndex = 132;
             // 
             // label20
             // 
@@ -480,16 +475,16 @@
             this.label20.Text = "Peso";
             this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
-            // txtPesoVendaVeiculo
+            // txtVenPeso
             // 
-            this.txtPesoVendaVeiculo.BackColor = System.Drawing.Color.White;
-            this.txtPesoVendaVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoVendaVeiculo.Location = new System.Drawing.Point(683, 428);
-            this.txtPesoVendaVeiculo.Name = "txtPesoVendaVeiculo";
-            this.txtPesoVendaVeiculo.ReadOnly = true;
-            this.txtPesoVendaVeiculo.Size = new System.Drawing.Size(196, 26);
-            this.txtPesoVendaVeiculo.TabIndex = 134;
-            this.txtPesoVendaVeiculo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtVenPeso.BackColor = System.Drawing.Color.White;
+            this.txtVenPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVenPeso.Location = new System.Drawing.Point(683, 428);
+            this.txtVenPeso.Name = "txtVenPeso";
+            this.txtVenPeso.ReadOnly = true;
+            this.txtVenPeso.Size = new System.Drawing.Size(196, 26);
+            this.txtVenPeso.TabIndex = 134;
+            this.txtVenPeso.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label6
             // 
@@ -562,15 +557,15 @@
             this.label22.TabIndex = 143;
             this.label22.Text = "Nome";
             // 
-            // txtFliliaVendaFilial
+            // txtVenNomeFilial
             // 
-            this.txtFliliaVendaFilial.BackColor = System.Drawing.Color.White;
-            this.txtFliliaVendaFilial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFliliaVendaFilial.Location = new System.Drawing.Point(979, 493);
-            this.txtFliliaVendaFilial.Name = "txtFliliaVendaFilial";
-            this.txtFliliaVendaFilial.ReadOnly = true;
-            this.txtFliliaVendaFilial.Size = new System.Drawing.Size(196, 26);
-            this.txtFliliaVendaFilial.TabIndex = 142;
+            this.txtVenNomeFilial.BackColor = System.Drawing.Color.White;
+            this.txtVenNomeFilial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVenNomeFilial.Location = new System.Drawing.Point(979, 493);
+            this.txtVenNomeFilial.Name = "txtVenNomeFilial";
+            this.txtVenNomeFilial.ReadOnly = true;
+            this.txtVenNomeFilial.Size = new System.Drawing.Size(196, 26);
+            this.txtVenNomeFilial.TabIndex = 142;
             // 
             // label23
             // 
@@ -602,16 +597,87 @@
             this.label24.TabIndex = 146;
             this.label24.Text = "Filial";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(282, 196);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(81, 25);
+            this.label25.TabIndex = 148;
+            this.label25.Text = "Contato";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
+            // 
+            // txtContatoVenda
+            // 
+            this.txtContatoVenda.BackColor = System.Drawing.Color.White;
+            this.txtContatoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContatoVenda.Location = new System.Drawing.Point(287, 224);
+            this.txtContatoVenda.Name = "txtContatoVenda";
+            this.txtContatoVenda.ReadOnly = true;
+            this.txtContatoVenda.Size = new System.Drawing.Size(196, 26);
+            this.txtContatoVenda.TabIndex = 147;
+            this.txtContatoVenda.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(678, 536);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(155, 25);
+            this.label26.TabIndex = 150;
+            this.label26.Text = "Valor do Veículo";
+            // 
+            // txtVenValor
+            // 
+            this.txtVenValor.BackColor = System.Drawing.Color.White;
+            this.txtVenValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVenValor.Location = new System.Drawing.Point(683, 564);
+            this.txtVenValor.Name = "txtVenValor";
+            this.txtVenValor.ReadOnly = true;
+            this.txtVenValor.Size = new System.Drawing.Size(196, 26);
+            this.txtVenValor.TabIndex = 149;
+            // 
+            // txtTipoEndVenda
+            // 
+            this.txtTipoEndVenda.BackColor = System.Drawing.Color.White;
+            this.txtTipoEndVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipoEndVenda.Location = new System.Drawing.Point(37, 292);
+            this.txtTipoEndVenda.Name = "txtTipoEndVenda";
+            this.txtTipoEndVenda.ReadOnly = true;
+            this.txtTipoEndVenda.Size = new System.Drawing.Size(133, 26);
+            this.txtTipoEndVenda.TabIndex = 151;
+            // 
+            // btnVenGerarVenda
+            // 
+            this.btnVenGerarVenda.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnVenGerarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVenGerarVenda.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnVenGerarVenda.Location = new System.Drawing.Point(979, 550);
+            this.btnVenGerarVenda.Name = "btnVenGerarVenda";
+            this.btnVenGerarVenda.Size = new System.Drawing.Size(298, 40);
+            this.btnVenGerarVenda.TabIndex = 152;
+            this.btnVenGerarVenda.Text = "Gerar Venda";
+            this.btnVenGerarVenda.UseVisualStyleBackColor = false;
+            this.btnVenGerarVenda.Click += new System.EventHandler(this.btnVenGerarVenda_Click);
+            // 
             // Venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 881);
+            this.Controls.Add(this.btnVenGerarVenda);
+            this.Controls.Add(this.txtTipoEndVenda);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.txtVenValor);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.txtContatoVenda);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.txtIdVendedor);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.txtFliliaVendaFilial);
+            this.Controls.Add(this.txtVenNomeFilial);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.txtTelefoneVendaVendedor);
             this.Controls.Add(this.label7);
@@ -619,18 +685,17 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNomeVendaVendedor);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.txtPesoVendaVeiculo);
+            this.Controls.Add(this.txtVenPeso);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.txtModeloVendaVeiculo);
-            this.Controls.Add(this.cbTipoEnderecoVenda);
+            this.Controls.Add(this.txtVenModelo);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtBairroVenda);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtComplementoVenda);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtId_Cidade);
+            this.Controls.Add(this.txtCidadeVenda);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtId_Estado);
+            this.Controls.Add(this.txtEstadoVenda);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtCepVenda);
@@ -639,13 +704,13 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txtRuaVenda);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtCodigoRenavamVendaVeiculo);
+            this.Controls.Add(this.txtVenRenavan);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtChassiVendaVeiculo);
+            this.Controls.Add(this.txtVenChassi);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtAnoVeiculoVenda);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtNomeVeiculoVenda);
+            this.Controls.Add(this.txtVenAno);
+            this.Controls.Add(this.labelMarca);
+            this.Controls.Add(this.txtVenMarca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -681,21 +746,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCodigoRenavamVendaVeiculo;
+        private System.Windows.Forms.TextBox txtVenRenavan;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtChassiVendaVeiculo;
+        private System.Windows.Forms.TextBox txtVenChassi;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtAnoVeiculoVenda;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtNomeVeiculoVenda;
+        private System.Windows.Forms.TextBox txtVenAno;
+        private System.Windows.Forms.Label labelMarca;
+        private System.Windows.Forms.TextBox txtVenMarca;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtBairroVenda;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtComplementoVenda;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtId_Cidade;
+        private System.Windows.Forms.TextBox txtCidadeVenda;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtId_Estado;
+        private System.Windows.Forms.TextBox txtEstadoVenda;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtCepVenda;
@@ -703,11 +768,10 @@
         private System.Windows.Forms.TextBox txtNumeroVenda;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtRuaVenda;
-        private System.Windows.Forms.ComboBox cbTipoEnderecoVenda;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txtModeloVendaVeiculo;
+        private System.Windows.Forms.TextBox txtVenModelo;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtPesoVendaVeiculo;
+        private System.Windows.Forms.TextBox txtVenPeso;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNomeVendaVendedor;
         private System.Windows.Forms.Label label7;
@@ -715,9 +779,15 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtTelefoneVendaVendedor;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtFliliaVendaFilial;
+        private System.Windows.Forms.TextBox txtVenNomeFilial;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtIdVendedor;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtContatoVenda;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtVenValor;
+        private System.Windows.Forms.TextBox txtTipoEndVenda;
+        private System.Windows.Forms.Button btnVenGerarVenda;
     }
 }
