@@ -629,5 +629,20 @@ namespace SoftwareConcessionaria
             txtCliEstado.Text = string.Empty;
         }
 
+        private void txtCliEstado_TextChanged(object sender, EventArgs e)
+        {
+            txtCliEstado.CharacterCasing = CharacterCasing.Upper;
+
+            
+        }
+
+        private void txtCliEstado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                // Se não for uma letra, impede a entrada no TextBox
+                e.Handled = true;
+            }
+        }
     }
 }

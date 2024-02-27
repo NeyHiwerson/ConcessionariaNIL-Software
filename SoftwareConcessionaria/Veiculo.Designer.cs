@@ -51,7 +51,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtVeiEspecie = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtVeiTipo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtVeiChassi = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -95,7 +94,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.txtVeiCpfCnpj = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.txtVeiDisponivel = new System.Windows.Forms.TextBox();
             this.btnVeiBuscarPorId = new System.Windows.Forms.Button();
             this.btnVeiLimpar = new System.Windows.Forms.Button();
             this.btnVeiCriar = new System.Windows.Forms.Button();
@@ -123,6 +121,8 @@
             this.txtVeiLink8 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.txtVeiLink7 = new System.Windows.Forms.TextBox();
+            this.txtVeiTipo = new System.Windows.Forms.ComboBox();
+            this.txtVeiDisponivel = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picVeiLink1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,7 +134,7 @@
             this.btnVeiculoVeiculo.Name = "btnVeiculoVeiculo";
             this.btnVeiculoVeiculo.Size = new System.Drawing.Size(247, 40);
             this.btnVeiculoVeiculo.TabIndex = 22;
-            this.btnVeiculoVeiculo.Text = "Veiculo";
+            this.btnVeiculoVeiculo.Text = "Veículo";
             this.btnVeiculoVeiculo.UseVisualStyleBackColor = true;
             this.btnVeiculoVeiculo.Click += new System.EventHandler(this.btnVeiculoVeiculo_Click);
             // 
@@ -185,14 +185,17 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 28;
-            this.label2.Text = "Cod Renavam";
+            this.label2.Text = "Cód Renavam";
             // 
             // txtVeiCodRenavan
             // 
             this.txtVeiCodRenavan.Location = new System.Drawing.Point(27, 141);
+            this.txtVeiCodRenavan.MaxLength = 11;
             this.txtVeiCodRenavan.Name = "txtVeiCodRenavan";
             this.txtVeiCodRenavan.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiCodRenavan.TabIndex = 27;
+            this.txtVeiCodRenavan.TabIndex = 26;
+            this.txtVeiCodRenavan.TextChanged += new System.EventHandler(this.txtVeiCodRenavan_TextChanged);
+            this.txtVeiCodRenavan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVeiCodRenavan_KeyPress);
             // 
             // label3
             // 
@@ -208,7 +211,7 @@
             this.txtVeiPlaca.Location = new System.Drawing.Point(27, 196);
             this.txtVeiPlaca.Name = "txtVeiPlaca";
             this.txtVeiPlaca.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiPlaca.TabIndex = 29;
+            this.txtVeiPlaca.TabIndex = 27;
             // 
             // label4
             // 
@@ -224,7 +227,7 @@
             this.txtVeiAnoFabricacao.Location = new System.Drawing.Point(27, 251);
             this.txtVeiAnoFabricacao.Name = "txtVeiAnoFabricacao";
             this.txtVeiAnoFabricacao.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiAnoFabricacao.TabIndex = 31;
+            this.txtVeiAnoFabricacao.TabIndex = 28;
             // 
             // label5
             // 
@@ -241,7 +244,7 @@
             this.txtVeiAnoModelo.Location = new System.Drawing.Point(27, 303);
             this.txtVeiAnoModelo.Name = "txtVeiAnoModelo";
             this.txtVeiAnoModelo.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiAnoModelo.TabIndex = 33;
+            this.txtVeiAnoModelo.TabIndex = 29;
             this.txtVeiAnoModelo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label6
@@ -258,7 +261,7 @@
             this.txtVeiAnoExercicioAtual.Location = new System.Drawing.Point(27, 355);
             this.txtVeiAnoExercicioAtual.Name = "txtVeiAnoExercicioAtual";
             this.txtVeiAnoExercicioAtual.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiAnoExercicioAtual.TabIndex = 35;
+            this.txtVeiAnoExercicioAtual.TabIndex = 30;
             // 
             // label7
             // 
@@ -275,7 +278,7 @@
             this.txtVeiMarca.Location = new System.Drawing.Point(281, 85);
             this.txtVeiMarca.Name = "txtVeiMarca";
             this.txtVeiMarca.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiMarca.TabIndex = 37;
+            this.txtVeiMarca.TabIndex = 38;
             this.txtVeiMarca.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label8
@@ -308,7 +311,7 @@
             this.txtVeiEspecie.Location = new System.Drawing.Point(281, 196);
             this.txtVeiEspecie.Name = "txtVeiEspecie";
             this.txtVeiEspecie.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiEspecie.TabIndex = 41;
+            this.txtVeiEspecie.TabIndex = 40;
             // 
             // label10
             // 
@@ -318,13 +321,6 @@
             this.label10.Size = new System.Drawing.Size(28, 13);
             this.label10.TabIndex = 44;
             this.label10.Text = "Tipo";
-            // 
-            // txtVeiTipo
-            // 
-            this.txtVeiTipo.Location = new System.Drawing.Point(281, 251);
-            this.txtVeiTipo.Name = "txtVeiTipo";
-            this.txtVeiTipo.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiTipo.TabIndex = 43;
             // 
             // label11
             // 
@@ -340,7 +336,7 @@
             this.txtVeiChassi.Location = new System.Drawing.Point(281, 303);
             this.txtVeiChassi.Name = "txtVeiChassi";
             this.txtVeiChassi.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiChassi.TabIndex = 45;
+            this.txtVeiChassi.TabIndex = 42;
             // 
             // label12
             // 
@@ -356,7 +352,7 @@
             this.txtVeiCor.Location = new System.Drawing.Point(281, 355);
             this.txtVeiCor.Name = "txtVeiCor";
             this.txtVeiCor.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiCor.TabIndex = 47;
+            this.txtVeiCor.TabIndex = 43;
             // 
             // label13
             // 
@@ -372,7 +368,7 @@
             this.txtVeiCombustivel.Location = new System.Drawing.Point(281, 409);
             this.txtVeiCombustivel.Name = "txtVeiCombustivel";
             this.txtVeiCombustivel.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiCombustivel.TabIndex = 49;
+            this.txtVeiCombustivel.TabIndex = 44;
             this.txtVeiCombustivel.TextChanged += new System.EventHandler(this.txtVeiCombustivel_TextChanged);
             // 
             // label14
@@ -389,7 +385,7 @@
             this.txtVeiCategoria.Location = new System.Drawing.Point(27, 409);
             this.txtVeiCategoria.Name = "txtVeiCategoria";
             this.txtVeiCategoria.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiCategoria.TabIndex = 51;
+            this.txtVeiCategoria.TabIndex = 31;
             // 
             // label15
             // 
@@ -405,7 +401,7 @@
             this.txtVeiPotencia.Location = new System.Drawing.Point(27, 463);
             this.txtVeiPotencia.Name = "txtVeiPotencia";
             this.txtVeiPotencia.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiPotencia.TabIndex = 53;
+            this.txtVeiPotencia.TabIndex = 32;
             // 
             // label16
             // 
@@ -421,7 +417,7 @@
             this.txtVeiMotor.Location = new System.Drawing.Point(281, 463);
             this.txtVeiMotor.Name = "txtVeiMotor";
             this.txtVeiMotor.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiMotor.TabIndex = 55;
+            this.txtVeiMotor.TabIndex = 45;
             // 
             // label17
             // 
@@ -430,14 +426,15 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(47, 13);
             this.label17.TabIndex = 58;
-            this.label17.Text = "Valvulas";
+            this.label17.Text = "Válvulas";
             // 
             // txtVeiValvulas
             // 
             this.txtVeiValvulas.Location = new System.Drawing.Point(27, 516);
             this.txtVeiValvulas.Name = "txtVeiValvulas";
             this.txtVeiValvulas.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiValvulas.TabIndex = 57;
+            this.txtVeiValvulas.TabIndex = 33;
+            this.txtVeiValvulas.TextChanged += new System.EventHandler(this.txtVeiValvulas_TextChanged);
             // 
             // label18
             // 
@@ -453,7 +450,7 @@
             this.txtVeiVersao.Location = new System.Drawing.Point(592, 85);
             this.txtVeiVersao.Name = "txtVeiVersao";
             this.txtVeiVersao.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiVersao.TabIndex = 59;
+            this.txtVeiVersao.TabIndex = 52;
             // 
             // label19
             // 
@@ -462,14 +459,14 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(42, 13);
             this.label19.TabIndex = 62;
-            this.label19.Text = "Cambio";
+            this.label19.Text = "Câmbio";
             // 
             // txtVeiCambio
             // 
             this.txtVeiCambio.Location = new System.Drawing.Point(281, 516);
             this.txtVeiCambio.Name = "txtVeiCambio";
             this.txtVeiCambio.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiCambio.TabIndex = 61;
+            this.txtVeiCambio.TabIndex = 46;
             // 
             // label20
             // 
@@ -485,7 +482,8 @@
             this.txtVeiPeso.Location = new System.Drawing.Point(27, 569);
             this.txtVeiPeso.Name = "txtVeiPeso";
             this.txtVeiPeso.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiPeso.TabIndex = 63;
+            this.txtVeiPeso.TabIndex = 34;
+            this.txtVeiPeso.TextChanged += new System.EventHandler(this.txtVeiPeso_TextChanged);
             // 
             // label21
             // 
@@ -501,7 +499,7 @@
             this.txtVeiEixos.Location = new System.Drawing.Point(27, 624);
             this.txtVeiEixos.Name = "txtVeiEixos";
             this.txtVeiEixos.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiEixos.TabIndex = 65;
+            this.txtVeiEixos.TabIndex = 35;
             // 
             // label22
             // 
@@ -517,7 +515,7 @@
             this.txtVeiCarroceria.Location = new System.Drawing.Point(281, 569);
             this.txtVeiCarroceria.Name = "txtVeiCarroceria";
             this.txtVeiCarroceria.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiCarroceria.TabIndex = 67;
+            this.txtVeiCarroceria.TabIndex = 47;
             // 
             // label23
             // 
@@ -533,7 +531,7 @@
             this.txtVeiLotacao.Location = new System.Drawing.Point(27, 679);
             this.txtVeiLotacao.Name = "txtVeiLotacao";
             this.txtVeiLotacao.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiLotacao.TabIndex = 69;
+            this.txtVeiLotacao.TabIndex = 36;
             // 
             // label24
             // 
@@ -549,7 +547,7 @@
             this.txtVeiCapacidade.Location = new System.Drawing.Point(27, 735);
             this.txtVeiCapacidade.Name = "txtVeiCapacidade";
             this.txtVeiCapacidade.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiCapacidade.TabIndex = 71;
+            this.txtVeiCapacidade.TabIndex = 37;
             // 
             // label25
             // 
@@ -565,7 +563,7 @@
             this.txtVeiQuilometragem.Location = new System.Drawing.Point(281, 624);
             this.txtVeiQuilometragem.Name = "txtVeiQuilometragem";
             this.txtVeiQuilometragem.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiQuilometragem.TabIndex = 73;
+            this.txtVeiQuilometragem.TabIndex = 48;
             // 
             // label26
             // 
@@ -581,7 +579,7 @@
             this.txtVeiPortas.Location = new System.Drawing.Point(27, 792);
             this.txtVeiPortas.Name = "txtVeiPortas";
             this.txtVeiPortas.Size = new System.Drawing.Size(105, 20);
-            this.txtVeiPortas.TabIndex = 75;
+            this.txtVeiPortas.TabIndex = 38;
             // 
             // label27
             // 
@@ -597,7 +595,7 @@
             this.txtVeiCidade.Location = new System.Drawing.Point(281, 679);
             this.txtVeiCidade.Name = "txtVeiCidade";
             this.txtVeiCidade.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiCidade.TabIndex = 77;
+            this.txtVeiCidade.TabIndex = 49;
             // 
             // label28
             // 
@@ -613,7 +611,7 @@
             this.txtVeiEstado.Location = new System.Drawing.Point(281, 735);
             this.txtVeiEstado.Name = "txtVeiEstado";
             this.txtVeiEstado.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiEstado.TabIndex = 79;
+            this.txtVeiEstado.TabIndex = 50;
             // 
             // label29
             // 
@@ -629,7 +627,7 @@
             this.txtVeiNome.Location = new System.Drawing.Point(281, 792);
             this.txtVeiNome.Name = "txtVeiNome";
             this.txtVeiNome.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiNome.TabIndex = 81;
+            this.txtVeiNome.TabIndex = 51;
             // 
             // label30
             // 
@@ -645,7 +643,7 @@
             this.txtVeiValor.Location = new System.Drawing.Point(592, 141);
             this.txtVeiValor.Name = "txtVeiValor";
             this.txtVeiValor.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiValor.TabIndex = 83;
+            this.txtVeiValor.TabIndex = 53;
             // 
             // label31
             // 
@@ -661,7 +659,7 @@
             this.txtVeiCpfCnpj.Location = new System.Drawing.Point(592, 196);
             this.txtVeiCpfCnpj.Name = "txtVeiCpfCnpj";
             this.txtVeiCpfCnpj.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiCpfCnpj.TabIndex = 85;
+            this.txtVeiCpfCnpj.TabIndex = 54;
             // 
             // label32
             // 
@@ -671,13 +669,6 @@
             this.label32.Size = new System.Drawing.Size(58, 13);
             this.label32.TabIndex = 88;
             this.label32.Text = "Disponível";
-            // 
-            // txtVeiDisponivel
-            // 
-            this.txtVeiDisponivel.Location = new System.Drawing.Point(592, 251);
-            this.txtVeiDisponivel.Name = "txtVeiDisponivel";
-            this.txtVeiDisponivel.Size = new System.Drawing.Size(196, 20);
-            this.txtVeiDisponivel.TabIndex = 87;
             // 
             // btnVeiBuscarPorId
             // 
@@ -705,7 +696,7 @@
             // btnVeiCriar
             // 
             this.btnVeiCriar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVeiCriar.BackgroundImage")));
-            this.btnVeiCriar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVeiCriar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnVeiCriar.Location = new System.Drawing.Point(138, 112);
             this.btnVeiCriar.Name = "btnVeiCriar";
             this.btnVeiCriar.Size = new System.Drawing.Size(60, 49);
@@ -716,7 +707,7 @@
             // btnVeiEditar
             // 
             this.btnVeiEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVeiEditar.BackgroundImage")));
-            this.btnVeiEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVeiEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnVeiEditar.Location = new System.Drawing.Point(214, 112);
             this.btnVeiEditar.Name = "btnVeiEditar";
             this.btnVeiEditar.Size = new System.Drawing.Size(60, 49);
@@ -736,7 +727,7 @@
             // btnVeiAddLink1
             // 
             this.btnVeiAddLink1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVeiAddLink1.BackgroundImage")));
-            this.btnVeiAddLink1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVeiAddLink1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnVeiAddLink1.Location = new System.Drawing.Point(997, 232);
             this.btnVeiAddLink1.Name = "btnVeiAddLink1";
             this.btnVeiAddLink1.Size = new System.Drawing.Size(42, 32);
@@ -749,8 +740,8 @@
             this.btnVeiAdicionarVenda.Location = new System.Drawing.Point(138, 167);
             this.btnVeiAdicionarVenda.Name = "btnVeiAdicionarVenda";
             this.btnVeiAdicionarVenda.Size = new System.Drawing.Size(136, 49);
-            this.btnVeiAdicionarVenda.TabIndex = 95;
-            this.btnVeiAdicionarVenda.Text = "Adicionar a venda";
+            this.btnVeiAdicionarVenda.TabIndex = 66;
+            this.btnVeiAdicionarVenda.Text = "Adicionar à venda";
             this.btnVeiAdicionarVenda.UseVisualStyleBackColor = true;
             this.btnVeiAdicionarVenda.Click += new System.EventHandler(this.btnVeiAdicionarVenda_Click);
             // 
@@ -769,7 +760,7 @@
             this.txtVeiLink1.Location = new System.Drawing.Point(592, 303);
             this.txtVeiLink1.Name = "txtVeiLink1";
             this.txtVeiLink1.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink1.TabIndex = 96;
+            this.txtVeiLink1.TabIndex = 56;
             this.txtVeiLink1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label34
@@ -786,7 +777,7 @@
             this.txtVeiLink2.Location = new System.Drawing.Point(592, 355);
             this.txtVeiLink2.Name = "txtVeiLink2";
             this.txtVeiLink2.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink2.TabIndex = 98;
+            this.txtVeiLink2.TabIndex = 57;
             // 
             // label35
             // 
@@ -802,7 +793,7 @@
             this.txtVeiLink3.Location = new System.Drawing.Point(592, 409);
             this.txtVeiLink3.Name = "txtVeiLink3";
             this.txtVeiLink3.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink3.TabIndex = 100;
+            this.txtVeiLink3.TabIndex = 58;
             // 
             // label36
             // 
@@ -818,7 +809,7 @@
             this.txtVeiLink6.Location = new System.Drawing.Point(592, 569);
             this.txtVeiLink6.Name = "txtVeiLink6";
             this.txtVeiLink6.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink6.TabIndex = 106;
+            this.txtVeiLink6.TabIndex = 61;
             // 
             // label37
             // 
@@ -834,7 +825,7 @@
             this.txtVeiLink5.Location = new System.Drawing.Point(592, 516);
             this.txtVeiLink5.Name = "txtVeiLink5";
             this.txtVeiLink5.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink5.TabIndex = 104;
+            this.txtVeiLink5.TabIndex = 60;
             // 
             // label38
             // 
@@ -850,7 +841,7 @@
             this.txtVeiLink4.Location = new System.Drawing.Point(592, 463);
             this.txtVeiLink4.Name = "txtVeiLink4";
             this.txtVeiLink4.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink4.TabIndex = 102;
+            this.txtVeiLink4.TabIndex = 59;
             // 
             // label39
             // 
@@ -866,7 +857,7 @@
             this.txtVeiLink10.Location = new System.Drawing.Point(592, 792);
             this.txtVeiLink10.Name = "txtVeiLink10";
             this.txtVeiLink10.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink10.TabIndex = 114;
+            this.txtVeiLink10.TabIndex = 65;
             // 
             // label40
             // 
@@ -882,7 +873,7 @@
             this.txtVeiLink9.Location = new System.Drawing.Point(592, 735);
             this.txtVeiLink9.Name = "txtVeiLink9";
             this.txtVeiLink9.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink9.TabIndex = 112;
+            this.txtVeiLink9.TabIndex = 64;
             // 
             // label41
             // 
@@ -898,7 +889,7 @@
             this.txtVeiLink8.Location = new System.Drawing.Point(592, 679);
             this.txtVeiLink8.Name = "txtVeiLink8";
             this.txtVeiLink8.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink8.TabIndex = 110;
+            this.txtVeiLink8.TabIndex = 63;
             // 
             // label42
             // 
@@ -914,13 +905,38 @@
             this.txtVeiLink7.Location = new System.Drawing.Point(592, 624);
             this.txtVeiLink7.Name = "txtVeiLink7";
             this.txtVeiLink7.Size = new System.Drawing.Size(466, 20);
-            this.txtVeiLink7.TabIndex = 108;
+            this.txtVeiLink7.TabIndex = 62;
+            // 
+            // txtVeiTipo
+            // 
+            this.txtVeiTipo.FormattingEnabled = true;
+            this.txtVeiTipo.Items.AddRange(new object[] {
+            "automovel",
+            "moto"});
+            this.txtVeiTipo.Location = new System.Drawing.Point(281, 251);
+            this.txtVeiTipo.Name = "txtVeiTipo";
+            this.txtVeiTipo.Size = new System.Drawing.Size(196, 21);
+            this.txtVeiTipo.TabIndex = 41;
+            this.txtVeiTipo.SelectedIndexChanged += new System.EventHandler(this.txtVeiTipo_SelectedIndexChanged);
+            // 
+            // txtVeiDisponivel
+            // 
+            this.txtVeiDisponivel.FormattingEnabled = true;
+            this.txtVeiDisponivel.Items.AddRange(new object[] {
+            "Sim",
+            "Nao"});
+            this.txtVeiDisponivel.Location = new System.Drawing.Point(592, 251);
+            this.txtVeiDisponivel.Name = "txtVeiDisponivel";
+            this.txtVeiDisponivel.Size = new System.Drawing.Size(196, 21);
+            this.txtVeiDisponivel.TabIndex = 55;
             // 
             // Veiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 881);
+            this.Controls.Add(this.txtVeiDisponivel);
+            this.Controls.Add(this.txtVeiTipo);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.txtVeiLink10);
             this.Controls.Add(this.label40);
@@ -949,7 +965,6 @@
             this.Controls.Add(this.btnVeiLimpar);
             this.Controls.Add(this.btnVeiBuscarPorId);
             this.Controls.Add(this.label32);
-            this.Controls.Add(this.txtVeiDisponivel);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.txtVeiCpfCnpj);
             this.Controls.Add(this.label30);
@@ -993,7 +1008,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtVeiChassi);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtVeiTipo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtVeiEspecie);
             this.Controls.Add(this.label8);
@@ -1015,6 +1029,9 @@
             this.Controls.Add(this.btnVeiculoVenda);
             this.Controls.Add(this.btnVeiculoCliente);
             this.Controls.Add(this.btnVeiculoVeiculo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Veiculo";
             this.Text = "Veiculo";
             this.Load += new System.EventHandler(this.Veiculo_Load);
@@ -1048,7 +1065,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtVeiEspecie;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtVeiTipo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtVeiChassi;
         private System.Windows.Forms.Label label12;
@@ -1092,7 +1108,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox txtVeiCpfCnpj;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox txtVeiDisponivel;
         private System.Windows.Forms.Button btnVeiBuscarPorId;
         private System.Windows.Forms.Button btnVeiLimpar;
         private System.Windows.Forms.Button btnVeiCriar;
@@ -1120,5 +1135,7 @@
         private System.Windows.Forms.TextBox txtVeiLink8;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox txtVeiLink7;
+        private System.Windows.Forms.ComboBox txtVeiTipo;
+        private System.Windows.Forms.ComboBox txtVeiDisponivel;
     }
 }

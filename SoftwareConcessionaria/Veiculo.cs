@@ -481,5 +481,39 @@ namespace SoftwareConcessionaria
             return veiculoModel;
         }
 
+        private void txtVeiCodRenavan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtVeiCodRenavan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtVeiTipo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtVeiTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtVeiValvulas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtVeiPeso_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -67,6 +67,7 @@
             this.btnLoginEntrar.Text = "Entrar";
             this.btnLoginEntrar.UseVisualStyleBackColor = true;
             this.btnLoginEntrar.Click += new System.EventHandler(this.btnLoginEntrar_Click);
+            this.btnLoginEntrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnLoginEntrar_KeyPress);
             // 
             // txtLoginSenha
             // 
@@ -75,6 +76,7 @@
             this.txtLoginSenha.Name = "txtLoginSenha";
             this.txtLoginSenha.Size = new System.Drawing.Size(311, 32);
             this.txtLoginSenha.TabIndex = 20;
+            this.txtLoginSenha.TextChanged += new System.EventHandler(this.txtLoginSenha_TextChanged);
             // 
             // txtLoginUsuario
             // 
@@ -177,10 +179,14 @@
             this.Controls.Add(this.txtLoginUsuario);
             this.Controls.Add(this.lblLoginSenha);
             this.Controls.Add(this.lblLoginUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Login_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

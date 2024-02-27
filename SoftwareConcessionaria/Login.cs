@@ -23,7 +23,8 @@ namespace SoftwareConcessionaria
 
         public Login()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            this.AcceptButton = btnLoginEntrar;
             txtResposta.Text = "Offline";
 
             try
@@ -126,6 +127,28 @@ namespace SoftwareConcessionaria
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLoginEntrar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Impede o som do "ding" ao pressionar Enter
+                e.Handled = true;
+
+                // Chama o método associado ao clique do botão
+                btnLoginEntrar.PerformClick();
+            }
+        }
+
+        private void txtLoginSenha_TextChanged(object sender, EventArgs e)
+        {
+            txtLoginSenha.UseSystemPasswordChar = true;
         }
     }
 }

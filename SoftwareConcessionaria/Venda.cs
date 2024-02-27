@@ -32,7 +32,7 @@ namespace SoftwareConcessionaria
             InitializeComponent();
         }
 
-        private async void Venda_Load(object sender, EventArgs e)
+            private async void Venda_Load(object sender, EventArgs e)
         {
             imprimirCliente();
             imprimirEndereco();
@@ -187,7 +187,7 @@ namespace SoftwareConcessionaria
                                           $"Valor: {vendaRegistrada.valor:C}\n" +
                                           $"Data da Venda: {vendaRegistrada.dt_venda:dd/MM/yyyy HH:mm:ss}\n" +
                                           $"ID Colaborador: {vendaRegistrada.id_colaborador}";
-
+                  
                         MessageBox.Show(mensagem);
                     }
                     else

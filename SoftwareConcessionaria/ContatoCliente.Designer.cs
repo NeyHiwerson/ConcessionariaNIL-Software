@@ -38,17 +38,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCliEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCliDtNasc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCliRenda = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCliCpfCnpj = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCliTelefone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCliRg = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtCliCttTelefone = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,7 +55,6 @@
             this.txtCliRua = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtCliCep = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtCliCidade = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -74,6 +70,10 @@
             this.btnCliAddEndVenda = new System.Windows.Forms.Button();
             this.btnCliEditarEndereco = new System.Windows.Forms.Button();
             this.btnCliCriarEndereco = new System.Windows.Forms.Button();
+            this.txtCliTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCliCttTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCliCep = new System.Windows.Forms.MaskedTextBox();
+            this.txtCliDtNasc = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -118,7 +118,7 @@
             this.btnClienteVeiculo.Name = "btnClienteVeiculo";
             this.btnClienteVeiculo.Size = new System.Drawing.Size(247, 40);
             this.btnClienteVeiculo.TabIndex = 28;
-            this.btnClienteVeiculo.Text = "Veiculo";
+            this.btnClienteVeiculo.Text = "Veículo";
             this.btnClienteVeiculo.UseVisualStyleBackColor = true;
             this.btnClienteVeiculo.Click += new System.EventHandler(this.btnVendaVeiculo_Click);
             // 
@@ -168,14 +168,6 @@
             this.label4.TabIndex = 50;
             this.label4.Text = "Data de nascimento";
             // 
-            // txtCliDtNasc
-            // 
-            this.txtCliDtNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliDtNasc.Location = new System.Drawing.Point(33, 370);
-            this.txtCliDtNasc.Name = "txtCliDtNasc";
-            this.txtCliDtNasc.Size = new System.Drawing.Size(197, 26);
-            this.txtCliDtNasc.TabIndex = 49;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -208,6 +200,7 @@
             // 
             this.txtCliCpfCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliCpfCnpj.Location = new System.Drawing.Point(33, 162);
+            this.txtCliCpfCnpj.MaxLength = 14;
             this.txtCliCpfCnpj.Name = "txtCliCpfCnpj";
             this.txtCliCpfCnpj.Size = new System.Drawing.Size(195, 26);
             this.txtCliCpfCnpj.TabIndex = 53;
@@ -221,14 +214,6 @@
             this.label8.Size = new System.Drawing.Size(89, 25);
             this.label8.TabIndex = 56;
             this.label8.Text = "Telefone";
-            // 
-            // txtCliTelefone
-            // 
-            this.txtCliTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliTelefone.Location = new System.Drawing.Point(33, 565);
-            this.txtCliTelefone.Name = "txtCliTelefone";
-            this.txtCliTelefone.Size = new System.Drawing.Size(133, 26);
-            this.txtCliTelefone.TabIndex = 55;
             // 
             // label9
             // 
@@ -254,17 +239,9 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(28, 604);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(185, 25);
+            this.label17.Size = new System.Drawing.Size(175, 25);
             this.label17.TabIndex = 60;
-            this.label17.Text = "Contato De Ligação";
-            // 
-            // txtCliCttTelefone
-            // 
-            this.txtCliCttTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliCttTelefone.Location = new System.Drawing.Point(33, 632);
-            this.txtCliCttTelefone.Name = "txtCliCttTelefone";
-            this.txtCliCttTelefone.Size = new System.Drawing.Size(133, 26);
-            this.txtCliCttTelefone.TabIndex = 59;
+            this.label17.Text = "Contato de ligação";
             // 
             // btnLimpar
             // 
@@ -342,9 +319,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(558, 134);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 25);
+            this.label12.Size = new System.Drawing.Size(165, 25);
             this.label12.TabIndex = 101;
-            this.label12.Text = "Tipo_Endereco";
+            this.label12.Text = "Tipo de endereco";
             // 
             // label13
             // 
@@ -356,19 +333,11 @@
             this.label13.TabIndex = 99;
             this.label13.Text = "Cep";
             // 
-            // txtCliCep
-            // 
-            this.txtCliCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliCep.Location = new System.Drawing.Point(563, 230);
-            this.txtCliCep.Name = "txtCliCep";
-            this.txtCliCep.Size = new System.Drawing.Size(133, 26);
-            this.txtCliCep.TabIndex = 98;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(558, 604);
+            this.label14.Location = new System.Drawing.Point(558, 537);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(75, 25);
             this.label14.TabIndex = 105;
@@ -377,7 +346,7 @@
             // txtCliCidade
             // 
             this.txtCliCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliCidade.Location = new System.Drawing.Point(563, 632);
+            this.txtCliCidade.Location = new System.Drawing.Point(563, 565);
             this.txtCliCidade.Name = "txtCliCidade";
             this.txtCliCidade.Size = new System.Drawing.Size(167, 26);
             this.txtCliCidade.TabIndex = 104;
@@ -386,19 +355,22 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(558, 537);
+            this.label15.Location = new System.Drawing.Point(558, 604);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 25);
+            this.label15.Size = new System.Drawing.Size(118, 25);
             this.label15.TabIndex = 103;
-            this.label15.Text = "Estado";
+            this.label15.Text = "Estado (UF)";
             // 
             // txtCliEstado
             // 
             this.txtCliEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliEstado.Location = new System.Drawing.Point(563, 565);
+            this.txtCliEstado.Location = new System.Drawing.Point(563, 632);
+            this.txtCliEstado.MaxLength = 2;
             this.txtCliEstado.Name = "txtCliEstado";
             this.txtCliEstado.Size = new System.Drawing.Size(127, 26);
             this.txtCliEstado.TabIndex = 102;
+            this.txtCliEstado.TextChanged += new System.EventHandler(this.txtCliEstado_TextChanged);
+            this.txtCliEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliEstado_KeyPress);
             // 
             // label16
             // 
@@ -457,14 +429,14 @@
             this.btnCliAdicionarVenda.Name = "btnCliAdicionarVenda";
             this.btnCliAdicionarVenda.Size = new System.Drawing.Size(136, 49);
             this.btnCliAdicionarVenda.TabIndex = 113;
-            this.btnCliAdicionarVenda.Text = "Adicionar cliente a venda";
+            this.btnCliAdicionarVenda.Text = "Adicionar cliente à venda";
             this.btnCliAdicionarVenda.UseVisualStyleBackColor = true;
             this.btnCliAdicionarVenda.Click += new System.EventHandler(this.btnCliAdicionarVenda_Click);
             // 
             // btnCliEditar
             // 
             this.btnCliEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliEditar.BackgroundImage")));
-            this.btnCliEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCliEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCliEditar.Location = new System.Drawing.Point(492, 147);
             this.btnCliEditar.Name = "btnCliEditar";
             this.btnCliEditar.Size = new System.Drawing.Size(60, 49);
@@ -475,7 +447,7 @@
             // btnCliCriar
             // 
             this.btnCliCriar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliCriar.BackgroundImage")));
-            this.btnCliCriar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCliCriar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCliCriar.Location = new System.Drawing.Point(416, 147);
             this.btnCliCriar.Name = "btnCliCriar";
             this.btnCliCriar.Size = new System.Drawing.Size(60, 49);
@@ -488,16 +460,16 @@
             this.btnCliAddEndVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliAddEndVenda.Location = new System.Drawing.Point(723, 202);
             this.btnCliAddEndVenda.Name = "btnCliAddEndVenda";
-            this.btnCliAddEndVenda.Size = new System.Drawing.Size(148, 49);
+            this.btnCliAddEndVenda.Size = new System.Drawing.Size(147, 49);
             this.btnCliAddEndVenda.TabIndex = 116;
-            this.btnCliAddEndVenda.Text = "Adicionar endereco a venda";
+            this.btnCliAddEndVenda.Text = "Adicionar endereco à venda";
             this.btnCliAddEndVenda.UseVisualStyleBackColor = true;
             this.btnCliAddEndVenda.Click += new System.EventHandler(this.btnCliAddEndVenda_Click);
             // 
             // btnCliEditarEndereco
             // 
             this.btnCliEditarEndereco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliEditarEndereco.BackgroundImage")));
-            this.btnCliEditarEndereco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCliEditarEndereco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCliEditarEndereco.Location = new System.Drawing.Point(799, 147);
             this.btnCliEditarEndereco.Name = "btnCliEditarEndereco";
             this.btnCliEditarEndereco.Size = new System.Drawing.Size(60, 49);
@@ -508,7 +480,7 @@
             // btnCliCriarEndereco
             // 
             this.btnCliCriarEndereco.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCliCriarEndereco.BackgroundImage")));
-            this.btnCliCriarEndereco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCliCriarEndereco.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCliCriarEndereco.Location = new System.Drawing.Point(723, 147);
             this.btnCliCriarEndereco.Name = "btnCliCriarEndereco";
             this.btnCliCriarEndereco.Size = new System.Drawing.Size(60, 49);
@@ -516,11 +488,52 @@
             this.btnCliCriarEndereco.UseVisualStyleBackColor = true;
             this.btnCliCriarEndereco.Click += new System.EventHandler(this.btnCliCriarEndereco_Click);
             // 
+            // txtCliTelefone
+            // 
+            this.txtCliTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliTelefone.Location = new System.Drawing.Point(33, 565);
+            this.txtCliTelefone.Mask = "(99) 00000-0000";
+            this.txtCliTelefone.Name = "txtCliTelefone";
+            this.txtCliTelefone.Size = new System.Drawing.Size(149, 26);
+            this.txtCliTelefone.TabIndex = 117;
+            // 
+            // txtCliCttTelefone
+            // 
+            this.txtCliCttTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliCttTelefone.Location = new System.Drawing.Point(33, 632);
+            this.txtCliCttTelefone.Mask = "(99) 00000-0000";
+            this.txtCliCttTelefone.Name = "txtCliCttTelefone";
+            this.txtCliCttTelefone.Size = new System.Drawing.Size(149, 26);
+            this.txtCliCttTelefone.TabIndex = 119;
+            // 
+            // txtCliCep
+            // 
+            this.txtCliCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliCep.Location = new System.Drawing.Point(563, 230);
+            this.txtCliCep.Mask = "00000-000";
+            this.txtCliCep.Name = "txtCliCep";
+            this.txtCliCep.Size = new System.Drawing.Size(149, 26);
+            this.txtCliCep.TabIndex = 120;
+            // 
+            // txtCliDtNasc
+            // 
+            this.txtCliDtNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliDtNasc.Location = new System.Drawing.Point(33, 370);
+            this.txtCliDtNasc.Mask = "00/00/0000";
+            this.txtCliDtNasc.Name = "txtCliDtNasc";
+            this.txtCliDtNasc.Size = new System.Drawing.Size(149, 26);
+            this.txtCliDtNasc.TabIndex = 121;
+            this.txtCliDtNasc.ValidatingType = typeof(System.DateTime);
+            // 
             // ContatoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 881);
+            this.Controls.Add(this.txtCliDtNasc);
+            this.Controls.Add(this.txtCliCep);
+            this.Controls.Add(this.txtCliCttTelefone);
+            this.Controls.Add(this.txtCliTelefone);
             this.Controls.Add(this.btnCliAddEndVenda);
             this.Controls.Add(this.btnCliEditarEndereco);
             this.Controls.Add(this.btnCliCriarEndereco);
@@ -538,7 +551,6 @@
             this.Controls.Add(this.txtCliEstado);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtCliCep);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtCliNumero);
             this.Controls.Add(this.label11);
@@ -547,17 +559,14 @@
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txtCliCttTelefone);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtCliRg);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtCliTelefone);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCliCpfCnpj);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCliRenda);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCliDtNasc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCliEmail);
             this.Controls.Add(this.label7);
@@ -566,8 +575,11 @@
             this.Controls.Add(this.btnClienteCliente);
             this.Controls.Add(this.btnClienteVeiculo);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ContatoCliente";
-            this.Text = " ";
+            this.Text = " Cliente";
             this.Load += new System.EventHandler(this.ContatoCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -584,17 +596,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCliEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCliDtNasc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCliRenda;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCliCpfCnpj;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCliTelefone;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCliRg;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtCliCttTelefone;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label1;
@@ -604,7 +613,6 @@
         private System.Windows.Forms.TextBox txtCliRua;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtCliCep;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtCliCidade;
         private System.Windows.Forms.Label label15;
@@ -620,5 +628,9 @@
         private System.Windows.Forms.Button btnCliAddEndVenda;
         private System.Windows.Forms.Button btnCliEditarEndereco;
         private System.Windows.Forms.Button btnCliCriarEndereco;
+        private System.Windows.Forms.MaskedTextBox txtCliTelefone;
+        private System.Windows.Forms.MaskedTextBox txtCliCttTelefone;
+        private System.Windows.Forms.MaskedTextBox txtCliCep;
+        private System.Windows.Forms.MaskedTextBox txtCliDtNasc;
     }
 }
